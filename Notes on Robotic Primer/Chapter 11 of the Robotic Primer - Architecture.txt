@@ -1,0 +1,45 @@
+A robot's 'control architecture' provides guiding principles and contraints for organising a robots control systems (it's brain). These help a designer to program a robot in a way that will produce a desired overall outcome behaviour.
+
+It is better to not have one centrilised program that controls sensors, actuators and decisions, due to the massive decrease in robustness. For example the failure of one processor could cause the entire robot to stop functioning correctly.
+
+It is better for a robot to keep its brain on itself rather than having some or all of the thinking being done elsewhere and then being wirelessly communicated to the robot. This is due to wireless communitication being unreliable at times and losing connection could severly impact the robot's function.
+
+The process of using a step by step program to solve a problem is called an 'algorithm'
+
+The mark of a good programming language is that it is 'turing universal' which means it could be used to write any program, in theory atleast.
+
+
+Here a few types of control architecture:
+
+-Deliberate Control
+-Reactive Control
+-Hybrid Control
+-Behaviour based Control
+
+
+'Time-scale' is the amount of time the robot has to respond to changes in the environment compared to the speed at which it senses and thinks.
+
+Here are how time effects which of the 4 basic control architechtures should be used:
+
+-Deliberate control looks into the future and as such has a long time-scale, how long depends on how far into the future it looks.
+
+-Reactive control responds immediately to changes in the environment (real-time demands) and as such works on a short time-scale, without looking into the past or future.
+
+-Hybrid control uses both long time scale and short time scale from deliberate control and reactive control respectively.
+
+-Behaviour based control attempts to merge long and short time scale
+
+
+Modularity:
+
+'Modularity' refers to the way the control system is broken into pieces or components called modules, and how these modules interact with eachother in order to effect the robots behaviour.
+
+Here is how modularity is used in the basic 4 types of control architechtureL:
+
+-In deliberate control the system is split into many modules that activate in sequence, for example sensing, thinking, acting. With the output from one module being used as the input of the next.
+
+-In reactive control the modules are parallel and can sent messages to eachother at any point in various ways, all the modules act at once, not in a sequence.
+
+-In hybrid control the there are three modules, a deliberate part, reactive part and one in between. These all act at the same time and parallel so they can "talk" to eachother at any time.
+
+-In behaviour based control there are usually more than three modules that work similarly to reactive and hybrid control in that they are parallel and can pass messages to eachother at any time.

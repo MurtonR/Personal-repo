@@ -1,0 +1,35 @@
+Navigation:
+
+'Navigation' refers to the way a robot finds its way in the environment
+
+There are multiple problems that make navigation easier said than done, the main problem has to with uncertainty, since a robot doesn't usually know exactly where it is, this makes it much more difficult to get it to go to a specific location. Here are a few scenarios where a robot has to find a banana:
+
+-The robot has a world map that shows its location and the location of the banana, all that is left to do is to plan a path to the goal (banana) from the current location. This is known as the 'path planning problem', if the map is incorrect or the world changes then the world map may need to be updated, next the robot would need to search in order to ensure the accuracy of the map and then replan.
+
+-Next imagine the robot has a map of the world and the location of the banana but does not have its location, this is known as the 'localisation problem'. The first thing that the robot must do in this situation is to localise itself within the map (know where it is relative to the environment).
+
+-Next imagine the robot has a map of the world and its own location but not the location of the banana, in this case the robot would need to plan an effective search route (that is sure to find the banana if it exists) in order to find the banana. This is known as the 'coverage problem'.
+
+-Next imagine the robot does not have a map of the world. In this case, the robot may want to build a map as it goes along, this is the 'mapping problem'. However it is important to remember that just because the robot does not have a map of the world doesn't mean that the robot doesn't know its own location. This can be done by identifying "landmarks" or by using a global positioning system (GPS).
+
+-Imagine the same robot as the last situation additionally not knowing where it is either, in this scenario the robot needs to build a map, localise its location and search for the banana. This is caled the 'simultaneous localisation and mapping (SLAM) problem, also called concurrent mapping and localisation (CML) but the second term is not as popular.
+
+
+
+Overall the parts of each scenario contain components of a navigation system:
+
+-Localisation: finding out where you are.
+
+-Search: looking for the goal location.
+
+-Path planning: planning a path to the goal location.
+
+-Coverage: covering all of an area.
+
+-SLAM: localisation and mapping at the same time.
+
+
+
+
+
+Localisation

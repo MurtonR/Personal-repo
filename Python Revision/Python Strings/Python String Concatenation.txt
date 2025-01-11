@@ -1,0 +1,20 @@
+It is possible to combine two seperate strings using the + operator, this is concatenation.
+
+Example:
+
+a = "Joe,"
+b = "Biden"
+c = a + b
+print(c) #Prints, Joe,Biden
+
+
+
+
+You can us " " in order to have a space between the two strings once combined
+
+Example:
+
+a = "Joe,"
+b = "Biden"
+c = a + " " + b
+print(c) #Prints, Joe, Biden

@@ -1,0 +1,34 @@
+
+-OUTPUT
+
+#include <iostream>
+using namespace std
+
+int main() {
+    cout << "Hello World!";
+    cout << "I have a severe case of leprosy!";
+    return 0;
+
+-SYNTAX 
+
+#include <iostream>
+
+    std::cout << "Hello World!";
+    return 0;
+
+-NEW LINE
+
+#include <iostream>
+using namespace std
+
+int main() { 
+    cout << "Hello World! \n";
+    return 0;
+
+-VARIABLES
+
+#include <iostream>
+using namespace std
+
+int myNum = 10;
+cout << myNum;	

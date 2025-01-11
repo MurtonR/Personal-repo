@@ -1,0 +1,131 @@
+Reactive Systems:
+
+Purely 'reactive systems' do not store any internal representations of their environment and do not look forward to possible outcomes of their actions. They operate on a short time-scale and react based on current state information.
+
+The best way to keep a reactive control system simple and straightforward is to have each unique situation (state) that the robot could detect trigger only one unique action. In such a design the conditions are considered to be 'mutually exclusive' meaning only one can be true at a time.
+
+To ensure mutually exclusive conditions the system must encode each possible rules for all possible sensory input combinations. As the number and complexity of sensors increases the number of possible sensory input combinations also increase, this can lead to a sensor space that quickly becomes unwieldy. In robotics 'intractable' is used instead of unwieldy
+
+The design of the control systems and the designing of the complete set of rules is done at design-time and not at run-time. This means there should be alot of thinking done by the designer of the robot but none by the robot (whereas in deliberate control there is alot of thinking done by the system)
+
+
+
+In general complete mapping between the entire state-space and all possible responses are not used in manually-designed reactive systems. Instead the designer identifies the important situations and writes rules for those, all the other situations are covered with default responses, here is how that is done.
+
+
+Suppose that you are asked to write a reactive controller that will enable
+a robot to move around and avoid obstacles. The robot has two simple
+whiskers, one on the left and one on the right. Each whisker returns 1 bit,
+“on” or “off”; “on” indicates contact with a surface (i.e., the whisker is bent).
+
+A simple reactive controller for wall-following using those sensors would
+look like this:
+
+If left whisker bent, turn right.
+If right whisker bent, turn left.
+If both whiskers bent, back up and turn to the left.
+Otherwise, keep going.
+
+
+In the above example there are only four possible sensory inputs over all,
+so the robots’ sensor space is four, and therefore there are four reactive rules.
+The last rule is a default, although it covers only one possible remaining case. If the robot was to get itself into a corner where both of the whiskers alternate in touching the walls it could lead to it being stuck in a cycle, unable to move out of that corner. There are two popular ways to fix this issue:
+
+-Randomness; When turning use a random angle instead of a fixed one to add variety and prevent the robot from being stuck permenantly in oscillation, as it will eventually turn enough to move out of the corner.
+
+-History; We can remember the direction the robot moved in the previous step and if the situation occurs again soon we can turn in that same direction again, this prevents oscillation as instead of turning back and forth it will continue to turn in one direction until it is free. However this does not work in all environments.
+
+
+
+
+Action Selection:
+
+'Action Selelction' is the process of deciding among multiple possible actions or behaviours. It may select only one output action or may combine the actions to produce a result, these two approaches are called abriteration and fusion respectively.
+
+'Command Arbitration' is the process of selcting one action or behaviour from multiple candidates.
+
+'Command Fusion' is the process of combining multiple actions or behaviours into one output action.
+
+Although a reactive system may use arbitration to decide which action to execute, and thus execute only one action at a time, it still needs to monitor its rules in parallel, concurrently in order to be ready to respond to one or more of them might be triggered,
+
+
+Reactive systems must be able to support 'parallelism' which is the ability to monitor and execute multiple rules at once. Practically this means that the robots controller must be able to multi-task, to execute several processes/rules/commands at once. If a system cannot monitor its sensors in parallel and instead checks them in sequence it could miss an event and fail to react in time leading to collision or another unwanted situation. 
+
+
+
+The best known architecture for reactive control is Subsumption Architecture.
+
+
+
+
+
+Subsumption Architecture:
+
+The idea behind these systems is that we build the systems incrementally starting at the most basic and getting more complex which each module or layer.
+
+Subsumption systems consist of modules or layers that each perform a specific task, all of these layers work at the same time and as such the rules for any of them are ready to be executed at any time whever the correct situation occurs.
+
+Higher leves in a subsumtion systems can temporarilty disable one or more systems below them, for examle a the avoid-obstacles ins a robot can stop the robot from moving around. This would result in a robot that stays still but would still turn and back away if an object/somebody approaches it.
+
+There aretwo ways that higher layers temporarily disable lower layers:
+
+-Suppression; The inputs of a layer/module are suppressed, this way the module recieves no sensory input, it is not computed and sends no output to effectors or other modules.
+
+-Inhibition; The outputs of a layer/module are suppressed, this way the module recieves sensory input, performs its computation but cannot send any output to effectors or other modules.
+
+
+
+The name "subsumption architecture" comes from the idea that higher layers can assume the existence of lower layers and the goals they are achieving, so that the higher layers can use the lower ones to help them in achieving their own goals. This can happen either by using lower layers while they are running or selectively inhibiting lower levels.
+
+There are multiple benefits to this type of control architecture;
+
+-By designing and debugging the system incrementally we can avoid being bogged down in the complexity of the overall task of the robot.
+
+-If any higher-level layers or modules fail the lower layer/modules will be unaffected and as such the robot can still function to some degree.
+
+
+The design of subsumption systems is often called 'bottom-up' due to it starting at very simple layers and progressing to become more complex with each new layer
+
+The goal of subsumption architecture is to have very few connections between different layers, and the only intended connections should be those used for inhibition and suppression. Inside each layer there is plently of connections as multiple rules have to be put together to produce a task-achieving behaviour.
+
+We consider there to be 'strongly coupled' connection within layers but 'loosely coupled' between layers.
+
+
+
+
+
+Herbert, or How to Sequence Behaviours Through the World:
+
+
+Herbert used subsumption control architecture in a robot is designed to collect empty cans, with each layer having a different task to achieve. The main new idea was that all of these layers/modules were not activated in a sequential internal way but by sensing the environment and the robot directly.
+
+If you see something that looks like a soda can
+    approach it
+If it still looks like a soda can up close
+
+then extend the arm
+else turn and go away
+
+Whenever the arm is extended
+check between the gripper fingers
+
+Whenever the gripper sensors (IR break beam) detects something
+close the gripper
+
+Whenever the gripper is closed and the arm extended
+pull back the arm
+
+Whenever the arm is pulled back and the gripper closed
+go to drop off the can
+
+
+Herbert had no internal communication between layers/modules that achieved can-finding, grabbing, arm-retracting and moving around and yet was able to achieve all of these in the correct sequence every time. Herbert was using the sensory input as a means of having the rules and layers interact, Brooks called this "interaction through the world".
+
+Brooks recommends we "use the world as its own best model", this is a key principle of subsumption architecture and of reactive systems in general. If the world can provide the information directly through sensing, it is best for the robot to get it that way rather then to store it internally in a representation, which may be large, slow, expensive or outdated.
+
+
+
+
+
+
+

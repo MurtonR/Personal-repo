@@ -1,0 +1,88 @@
+Control theory in the past it was studied as part of mechanical engineering, specifically the part that focuses on designing and building machines and their properties
+
+
+Cybernetics is the study and comparison of communication and control processes in both biological and artifical systems.
+
+One of the key concepts of cybernetics is the coupling, combining and interaction between the mechanism, the organism and the environment
+
+
+If a machine has properties similiar to that of a biological system is is biomemetic, this means it imitates a biological system in some way.
+
+
+
+Grey Walter's Tortoise was built with three wheels in a tricycle design, with a front wheel for steering and two back wheels for driving.
+
+
+
+
+
+Machina Speculatrix (machines that thinks/speculates) consisted of:
+
+-One photocell, a sensor that detects light.
+
+-One bumpcell, a sensor that detects contact with objects.
+
+-One rechargeable battery
+
+-Three wheels.
+
+-Three motors, one for each wheel.
+
+-One analog electric circuit using two vacuum tubes serving as the brain and connecting the sensors to the wheels
+
+
+
+Using just these compotents the tortoise was able to:
+
+-Find the light
+
+-Head toward the light
+
+-Back away from bright light 
+
+-Turn and push to avoid obstacles
+
+-Recharge battery
+
+
+
+Reactive control: A way of controlling robots that consists of prioritised "reflexes", when properly combined these "reflexes" resulted in animal like behaviour.
+
+
+Emergent behaviour: The turtles maifested a variety of complex patterns of behaviours that were not programmed in, this was an example of how animal-like realistic behaviour can be achieved while only using simple artifical mechanisms.
+
+
+Artifical life: Is a field of research similiar to robotics but focuses much more on the computational systems that exist within a computer than the real world.
+
+
+Photophilic: Robots with photocells connected to the wheels, so the stronger the light the faster the robot moved as if it was attracted to the light, this is called photophilic (loving light).
+
+
+Photophobic: Robots with inverted connections to the wheel, so the stronger the light the slower the robot moved, almost like it was afraid or disliked the light, this is called photophobic (afraid of light).
+
+
+Excitatory connection: A connection between the sensors and motors where the stronger the sensory input the stronger the motor output, this is called excitatory connection as the input excites the output.
+
+
+Inhibatory connection: A connection between the sensors and motors where the stronger the sensory input the weaker the motor output, this is called inhibatory connection as the input inhibits the output.
+
+
+
+It was decided that in order for machines to be intelligent the machines would need to do some heavy-duty thinking and in order to do that they would need to use the following:
+
+-Internal models of the world
+
+-Search through possible solutions
+
+-Use both planning and reasoning in order to solve problems
+
+-Symbolic representation of imformation
+
+-Hierarchical system organisation
+
+-Sequential program execution
+
+
+
+
+Vision based navigation first begain with CART which moves very slow, not because it was slow moving, but instead because it was slow thinking

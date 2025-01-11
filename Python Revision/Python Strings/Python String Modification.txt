@@ -1,0 +1,49 @@
+Python has many built-in methods that can be used to modify strings.
+
+The first is the method upper() that returns the string fully in upper case.
+
+Example:
+
+a = "Hello!"
+print(a.upper()) #Prints, HELLO!
+
+
+
+
+The next method is lower(), which returns the string fully in lower case.
+
+Example:
+
+a =  "Hello!"
+print(a.lower()) #Prints, hello!
+
+
+
+
+The next method is strip(), this removes any whitespace before or after the string.
+
+Example:
+
+a = " Hello! "
+print(a.strip()) #Prints, Hello! , however it removes the whitespace which is useful as they count as characters
+
+
+
+
+The next method is replace() this can be used to replace a string with another.It replaces all instances of the selected part of the string, for example it would replace all l's in a string with two.
+
+Example:
+
+a = "Hello!"
+print(a.replace("l" , "p")) #Prints, Heppo!
+
+
+
+
+
+The last method is split(), this method splits a string into a list at specific seperator characters.
+
+Example:
+
+a = "Hello, World!"
+print(a.split(",")) #Prints, ['Hello', 'World!']

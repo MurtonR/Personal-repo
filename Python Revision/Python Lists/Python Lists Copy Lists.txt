@@ -1,0 +1,24 @@
+It is not possible to copy a list by simple doing thisList = myList as myList will only be a referrence to thisList and as such will be changed when thisList is changed.
+
+Instead the copy() method should be used.
+
+Example:
+
+myList = ["Winner", "Happy", "Hero"]
+
+newList = myList.copy()
+
+print(newList)
+
+
+
+
+It is possible to make a copy by using the built-in method list()/
+
+Example:
+
+myList = ["Winner", "Happy", "Hero"]
+
+newList = list(myList)
+
+print(newList)

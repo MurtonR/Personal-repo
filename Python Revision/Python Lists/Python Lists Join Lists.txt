@@ -1,0 +1,34 @@
+It is possible to join/concatenate lists by using one of three methods, using the + operator, using append() method or the extend() method.
+
+Example:
+
+myList = ["Winner", "Happy"]
+myOtherList = ["Good", "Positive"]
+
+jointList = myList + myOtherList
+
+print(jointList)
+
+
+
+Example:
+
+myList = ["Winner", "Happy"]
+myOtherList = ["Good", "Positive"]
+
+for x in myOtherList:
+    myList.append(x)
+
+print(myList)
+
+
+
+
+Example:
+
+myList = ["Winner", "Happy"]
+myOtherList = ["Good", "Positive"]
+
+myList.extend(myOtherList)
+
+print(myList)

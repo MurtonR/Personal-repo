@@ -1,0 +1,26 @@
+To get the size of an array you can use the "sizeof()" operator
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+cout << sizeof(myNumbers);
+
+However this outputs 20 even though the array only has 5 elements, this is because the output is the size in bytes. 
+In this case for an "int" array each element is 4 bytes so 4*5 = 20 bytes in total
+
+
+This means in order to get the size of an array you have to divide the result in bytes by the bytes per element for that data type
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+int getArrayLength = sizeof(myNumbers) / sizeof(int);  -This is the total bytes divided by the bytes per element
+cout << getArrayLength;                                -"getArrayLength" is just an "int" variable 
+
+
+
+You can use the "sizeof()" operator instead of the "i < 5" in a for loop, or any condition that cyles through all elements
+
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i = 0; i < sizeof(myNumbers) / sizeof(int); i++) {
+  cout << myNumbers[i] << "\n";
+}
+
+This is better as it is applicable to any size of array and is more sustainable, you can also just use a for-each loop

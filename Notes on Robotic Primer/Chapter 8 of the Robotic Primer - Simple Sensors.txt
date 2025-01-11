@@ -1,0 +1,150 @@
+Sensors:
+
+Passive sensors measure a physical property from the environment, they consist of a detector, which detects the property to be measured. 
+
+Active sensors on the other hand provide their own signal/stimuli and then use how that signal interacts with the environment as the property to measure. Active sensors consist of two main parts the emitter and the detector, these emit a signal and detects the signal as it returns repspectively.
+
+
+A sensor is considered complex based on the amount of processing that is required for it's data.
+A sensor is considered active or passive based on.
+
+
+
+
+Switches:
+
+If a switch is closed current is able to pass through, if a circuit is open then no current is able to pass through. This is very useful as it means that it is possible to determine if a switch is on or off by measuring the current.
+
+Switches measure the change in current in a circuit that results from a physical interaction of an object with the switch.
+
+A switch can be wired to be normally closed or open, although it doesn't truly matter as the change in current is measured.
+
+There are many ways to use switches in sensors:
+
+-Contact sensors; these detect when an object/surface makes contact with the sensor, for example bumping into a wall or     	          grasping an object, also known as a bump switch
+
+-Limit sensors; these detect when a mechanism has reached the limit of it's range, for example when a gripper is wide 	 	        open or completely closed.
+
+-Shaft encoder sensors; these detect every time a motor shaft turns by having a switch click (open/close) each time the	                 	                shaft turns.
+
+Robots aren't able to obtain as much sensory information as humans as we have skin which can sense contact, pressure, heat, each of our body hair's are similiar to whiskers, so it's completely reasonable that robots aren't as sensitive.
+
+
+
+
+Light Sensors:
+
+Is it often very useful for robots to be able to detect light intensity in the environment, for example special locations such as recharging stations or goals can be marked with light. A robot that can sense which areas are darkest can for example hide in them more effectively than if it could only percieve the physical shape of the environment.
+
+
+Light sensors measuring the amount of light impacting a photocell.
+
+Photocells are sensitive to light, this is reflected in the resistance of the ciruit they are attached to:
+
+-When the light intensity is high  (Bright) the resisitance is low
+-When the light intensity is low (Dark) the resistance is high
+
+This means that in reality a photocell is really a darksensor, however this can be made more intuitive by inverting the output of the circuit so that:
+
+-When the light intensity is high (Bright) the resistance is high
+-When the light intensity is low (Dark) the resisitance is low 
+
+
+Although light sensors are simple they can detect a wide range of wavelengths, for example they can be used to detect ultraviolet, infa-red and can be tuned to a specific wavelength, this is useful for designing a specialised sensor.
+
+The position, orientation and shielding is important for the accuracy and range of the sensors.
+
+Light sensors can be passive or active in a variety of ways and can be used to measure the following properties:
+
+-Light intensity; how light/dark it is
+
+-Differential intensity; the difference in light intensity between photocells
+
+-Break in continuity; change/drop-in light intensity
+
+
+
+
+Polarisation:
+
+"Normal light" that emanates from a light source consists of light waves that travel in all directions relative to the horizon. However if we put a polarising filter infront of the light source only the light waves with the same direction as the filter will pass through and continue.
+
+This direction is called the 'characteristic plane', 'characteristic' as it is special for that filter and 'plane' as it is planar 'two-dimensitional'.
+
+As such 'polarised light' is light whose waves all travel in a particular direction, along a particular plane.
+
+This is useful as it is possible to design polarised light sensors to detect polarised light through a specific filter.
+
+
+By using photocells and polarising filters in different arrangements, you can create specialised sensors that manipulate what and how much light is detected.
+
+
+These are active sensors as they have a detector (photocell) and an emitter (light source), they also have atleast one polarising filter. The general idea is that the filtering occurs somewhere between the detector and emittor, however where this filtering occurs, close or far away from the emitter or detector all depends on these factors of the robot such as it's task, environment or design.
+
+
+
+
+Reflective Optosensors:
+
+These operate on the principle of reflected light, these are active sensors and consist of an emittor and detector.
+
+The emitter is usually a light emitting diode (LED) and the detector is often a photodiode or phototransistor.
+
+
+These are different from resistive photocells, resistive photocells are simple but are slow due to waiting for a change in resistance to occur, whereas photodiodes and phototransistors are quick and as such find more use in robotics.
+
+
+There are two basic bays the emitter and detector can be arranged in reflective optosensors:
+
+-Reflectance sensors; the presence of an object is detected when the light from the emitter reflects off of the object 			      and onto the detector, in this case the emitter and detector are side by side but seperated by a 	   	              barrier.
+
+
+-Break Beam sensors; the emitter and detector face eachother and an object is detected if the beam of light is broken or 	             interrupted between the two.
+
+
+
+
+
+Reflectance sensors:
+
+These can be used to do a variety of tasks:
+
+-To detect walls around the robot (to detect the pre
+
+-To detect the distance from the object to the sensor
+
+-To detect a feature of a surface, such as a line on the floor or wall.
+
+-Decode a barcode.
+
+-Track the rotations of wheel using shaft encoding.
+
+
+Light reflectance sensing seems easy however it is effected by the colour, texture and other properties that make it a challenge in real life use. 
+
+A light coloured smooth surface reflects light significantly more than a rough dark coloured surface, the darker colour the more light is absorbed, as such the lighter coloured surface may appear closer that the darker one even if it is further away.
+
+A very dark object could even be invisible to some reflectance sensors, and this is also made worse as no sensor is without error and noise interferance (this refers to interferance from the environment.
+
+
+A light sensor also has to sense in environments which already have ambient light, and as such the light sensor has to be able to sensitive to light that is from it's emitter but not to ambient light. This is made even more difficult if the ambient light is the same wavelength as the light emitted from the emitter.
+
+In order to be able to use the reflected lightto determine the shape of the environment around the robot it has to be able to determine what light is ambient and what is emitted.
+
+
+In order to do this it takes two readings of the light, one with the emitter off (only detecting the ambient light) and one with the emitter on. The readings of the first is deducted from the second, leaving only the amount of light that is reflected from the emitter back onto the detector. This is an example of sensor calibration.
+
+
+Calibration is the process of adjusting a mechanism in order to increase performance (accuracy, precision or range are examples). The amount of calibration (only initially, once a week, constantly) and who does the calibration (the sensor, designer or user). For a reflectance sensor it is required, in order for the sensor to remain accurate, to calibrate very often as the ambient light can change at anytime and often changes drastically (a light source being turned on or off, the sun rising or setting, moving into a shaded area, moving into a building with different light levels) .
+
+If the emitter and ambient light have the same wavelength then there is interference and it is much more difficult to remove. This can be solved by encoding the signal from the emitter so that the detector can easily tell it apart from ambient light. One way to do this is through the use of polarisation filters, another way is to alter the wavelength of the emitted light.
+
+
+Infra Red Light:
+
+Visible light that is in the frequency band of the electromagnetic spectrum that is able to be perceived by the human eye, infra red light is in the frequency band that humans cannot perceive. IR sensors are a type of light sensors that function the same however they detect infra red light, they are used as reflectance or break beam sensors.
+
+Infra red sensors are usually used as active sensors in robotics as there is little need for robots to be able to detect ambient IR light. However passive IR sensors are used in IR goggles (night vision goggles), ans work by collecting and enhance the light in the IR spectrum and turn it into visible light. They can be tuned to human body heat and are used to effectively detect human movement in the dark.
+
+IR is popular in robotics as it can be modulated easily, and as such is less prone to interferance. Modulated IR is also used to transmit messages which is how IR modems work.
+

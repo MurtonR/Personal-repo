@@ -1,0 +1,183 @@
+A function is a block of code that only runs when called, you can pass data through a function, this data is called parameter. A function can return data as a result.
+
+
+
+
+In python a function is defined by using the def keyword.
+
+Example:
+
+def my_Function():
+    print("This is my function")
+
+my_Function() #Prints, This is my function
+
+
+
+
+
+Information can be passed through functions as arguments, in order to specify an argument they are placed in brackets, each argument needs to be seperated by a comma.
+
+Example:
+
+def my_Function(firstName):
+    print(firstName + " Biden")
+
+my_Function("Joe")
+my_Function("Jill")
+my_Function("Hunter")
+
+
+The terms arguments and parameters can be used to mean the same thing; information that is passed into a function.
+
+-An parameter is the variable listed in the parinthesis of the function
+
+-An argument is the value that is sent to the function when called
+
+
+
+
+By default a function must have the correct number of arguments, if the function expects two arguments, it must contain 2. If a function calls for a parameter that doesn't exist or doesn't call all the agruments then it will result in an error.
+
+Example:
+
+def my_Function(firstName, lastName):
+    print(firstName + " " + lastName)
+
+my_Function("Joe", "Biden") #Prints, Joe Biden
+
+
+
+
+This is what it looks like when the function calls for a function that doesn't exist.
+
+Example:
+
+def my_Function(firstName, lastName):
+    print(firstName + " " + lastName)
+
+my_Function("Joe") #Prints, TypeError: my_Function() missing 1 required positional argument: 'lastName'
+
+
+
+
+
+If you don't know how many arguments you will recieve, you can use * before the parameter in the parentheses When that argument is called the values will be placed in a tuple of arguments, and as such the arguments can be accessed in the tuple in the usual way.
+
+Example: 
+
+def my_Function(*firstName):
+    print("The youngest child is " + firstName[1])
+
+my_Function("Joe", "Obama", "Trump") #Prints, The youngest child is Obama
+
+
+
+
+
+You can use key = value for arguments in order to assign values to parameters without them being in order.
+
+Example:
+
+def my_Function(childOne, childTwo, childThree):
+    print("The youngest child is " + childOne)
+
+my_Function(childThree = "Joe", childTwo = "Trump", childOne = "Obama")
+
+
+
+
+
+
+If you don't know the number of keyword arguments then ** can be used before the parameter in the function parentheses, this will cause the function to recieve a dictionary of all the values and can access them the same. Keyword arguments is often shortened to kwargs.
+
+Example:
+
+def my_Function(**Child):
+    print("The child's last name is " + Child["lastName"])
+
+my_Function(firstName = "Joe", lastName = "Biden") #Prints, The child's last name is Biden
+
+
+
+
+You can send any data types of arguments to the function and they will be treated the exact same in the function as they would be normally.
+
+Example:
+
+def my_Function(fruits):
+    for x in fruits:
+        print(x)
+
+fruits = ["Apple", "Banana", "Cherry"]
+
+my_Function(fruits) #Prints, Apple
+                             Banana
+                             Cherry
+
+
+
+
+
+
+To let a function return a value use the return statement.
+
+Example:
+
+def my_Function(x):
+    return 5 * x
+
+my_Function(3)
+my_Function(5)
+my_Function(7)
+
+
+
+def my_Function(x):
+    return x ++
+
+my_Function(70)
+my_Function(12)
+my_Function(44)
+
+
+
+
+
+
+The pass statement can be used in the case that a function definition has no content, put in a pass statement so it doesn't result in an error.
+
+Example:
+
+def my_Function():
+    pass
+
+
+
+
+
+
+Python also accepts function recursion, this means that a defined function can call upon itself. Recursion allows a function to loop through data to reach a result. With recursion one must be careful or else it is possibble to make a never-ending loop that never terminates, or making a function that uses alot of memory or processing power.
+
+Example:
+
+def my_Recursion(k):
+    if(k > 0):
+        result = k + my_Recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+        print("K is less than 0")
+    return result
+
+print("\n\nThis is recursion with numbers")
+
+my_Recursion(6)
+
+
+
+
+
+
+
+

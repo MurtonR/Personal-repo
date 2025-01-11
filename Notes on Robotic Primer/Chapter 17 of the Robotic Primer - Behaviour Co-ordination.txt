@@ -1,0 +1,35 @@
+Behaviour Coordination:
+
+Every robot that has more than one behaviour or action at its disposal has to solve the difficult problem of 'action selection' or 'behaviour coordination'.
+
+Both hybrid and behaviour-based systems both have multiple modules. In hybrid systems the middle layer is often stuck with the job, whereas in behaviour-based systems the job may be distributed throughout the entire control system. There are two basic ways of selecting the next behaviour or action; 'arbritration' and 'fusion'.
+
+
+
+Behaviour Arbitration:
+
+'Arbitration' is the process of selecting one action or behaviout from multiple possible candidates. Arbitration-based behaviour coordination is called 'competitive behaviour coordination', because multiple candidate behaviours compete but only one can win. There are two ways arbitration can be done:
+
+-Fixed priority heirarchy (each behaviour has an assigned priority)
+
+-Dynamic heirarchy (behaviour priorities change at run-time)
+
+
+Subsumption architecture uses a fixed priority heiarchy of behaviours which is implemented through inhibition of the behaviours' outputs and suppression of inputs. 
+
+Many hybrid systems use fixed priority heirarchies, in some systems the planner has control over the reactive system.
+
+More sophisticated hybrid systems use dynamic hierarchies in order to have control of the system transition between the reactive and deliberate parts of the controller, this is done in order to get the best performance. Behaviour-based systems similiarly use dynamic arbitration in order to decide what behaviour wins and takes control of the robot next.
+
+Dynamic arbitration usually involves computing some function in order to decide who wins. This function can be anything from voting, fuzzy logic, probability or spreading of activation.
+
+
+
+Behaviour Fusion:
+
+'Behaviour fusion' is the process of combining multiple possible candidate actions or behaviours into a single output action/behaviour for the robot. This type of behaviour coordination is called the "cooperative" method as it combines the output of multiple behaviours to produce the final result, which may be one or more existing behaviours or a completely new result.
+
+In order to combine two or more behaviours, the behaviours must be represented in a way that allows combination to be possible.
+
+
+

@@ -1,0 +1,40 @@
+-Use if to specify a block of code to be executed, if a specified condition is true
+-Use else to specify a block of code to be executed, if the same condition is false
+-Use else if to specify a new condition to test, if the first condition is false
+-Use switch to specify many alternative blocks of code to be executed
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int time = 22;
+  if (time < 10) {
+    cout << "Good morning.";  -If time is less than 10 output "Good morning"
+  } else if (time < 20) {     -If time is less than 20 output "Good day"
+    cout << "Good day.";
+  } else {                    -If time is anything else output "Good evening"
+    cout << "Good evening.";
+  }
+  return 0;
+}
+
+
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:
+
+(variable = (condition) ? expressionTrue : expressionFalse;)
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  int time = 20;
+  string result = (time < 18) ? "Good day." : "Good evening.";  -"Good day" is output when the result is "true" (1)
+  cout << result;                                               -The "?" is important 
+  return 0;                                                     -is "false" (0) then "Good evening" is output
+}
+
+

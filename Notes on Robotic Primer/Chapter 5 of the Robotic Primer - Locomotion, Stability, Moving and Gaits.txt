@@ -1,0 +1,77 @@
+The word locomotion refers to the way a body (robot) moves from place to place, it comes from the latin words locus (place) 
+and motion (movement)
+
+It is significantly more difficult to use legs for locomotion than wheels in robots, even though naturally almost every land creature uses legs for locomotion, this is because of two main reasons:
+
+-Legged locomotion has more DOF and as such is much more difficult to control and build
+
+-Stability is much more of an issue in legged locomotion
+
+
+
+Stability:
+
+Almost all robots need to be stabile, meaning they do not wobble, lean or fall over easily as this causes significant problems for a robot and makes achieving set goals near impossible.
+
+There are two types of stability, static and dynamic, static stability is the property of being stabile while not moving.
+Suprisingly humans are not statically stable as they need to use energy in order to stand up and when we faint, fall over.
+If we were staticaly stable we would remain upright most of the time.
+
+
+The center of gravity (COG) needs to be above the ground points (where legs/wheels touch the ground) in order for a body to remain balanced and stable. When the COG is not above the ground points it begins to fall and brings the body with it, resulting in the whole body falling over.
+
+The area of the ground covered by ground points is called the polygon of support, it is called this because if you draw the shape of the ground points it will result in a polygon.
+
+Due to the human body having a high COG it is very difficult to keep the body balanced, as it is difficult to keep that COG over our small polygon of support and as such humans constantly make small movements in order to keep our balance, the amount of minor movements that humans do unconsiously in order to stay stable while standing still.
+
+A robot with three legs would find it significatly easier to be statically stable, a robot with four legs even more so. However a robot with four legs could use three legs to remain statically stable and the other free leg to move, a body that does this is able to do statically stable walking .
+
+
+Statically Stable Walking is the ability to walk and maintain a constant balance.
+
+A basic principle of statically stable walking is that the weight of one leg is negligable compared to the rest of the body and as such doesn't change the COG enough for it to be an issue.
+
+Statically Stable Walking is often slow and uses significant amount of energy, however it is very safe and secure.
+
+
+The alternative to statically stable walking is dynamic stability.
+
+A robot with dynamic stability is one that must actively balance in order to remain stable, robots with this are called dynamically stable.
+
+One example of dynamically stable robots are one-legged hopping robots, these must constantly hop and are unable to remain statically stable. Balancing humans, certain objects and robots such as the one-legged robot is formally called the inverse pendulum problem.
+
+Using two-legged movement is only slightly easier to balance than one-legged and a programming a robot like this to balance helps us to understand the amount of small movements and the complexity of them required for humans to be able to stand and move with relative ease.
+
+It is also possible for a robot that is statically stable to use dynamic stabile movement patterns in order to move faster and being more energy efficient, this can be done by lifting up more legs and programming a robot to move in a different way.
+
+
+
+
+Moving and Gaits:
+
+A gait is the particular way a body moves, in this case a robot, specifically it the order and way that it lifts and lowers it's legs and feet on the ground.
+
+Desirable robot gaits have the following properties:
+
+-Stability so the robot does not fall over
+
+-Speed so the robot can move quickly
+
+-Energy efficiency in order to not use a great deal of energy moving
+
+-Robustness so that the robot can recover from certain failures
+
+-Simplicity so the controller for the gait is not unwieldly
+
+Robots do not require all of the properties above as it is possible for them to conflict, such as the safety requirements decreasing energy efficiency or by making a robot's gait more robust but at the cost of simplicity.
+
+There are many different combinations of legs and gaits that can be used for robots and that are more or less popular, many arthropds have 6 or more legs, this number of legs is common in robotics due to the inherent stability that so many legs give and the number of gaits both statically and dynamically stable that are available to use.
+
+Six legs allow for multiple gaits, the first called the tripod gait is a statically stable gait that has three legs that stay on the ground forming a tripod and another three that move the robot. If the sets of three legs are alternating then the gait is called the alternate tripod gait and produces a very efficient walking that can be found in nature being used by various bugs.
+
+Almost all six legged robots use the alternative tripod gait due to it's efficiency.
+
+
+If a robot has more than six legs then it it can use a version of the alternative tripod gait called the ripple gait as the alternating legs lift and fall in a ripple down the body.
+
+

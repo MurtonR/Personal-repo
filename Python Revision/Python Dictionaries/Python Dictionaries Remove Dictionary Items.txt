@@ -1,0 +1,92 @@
+There are multiple ways to remove items from a dictionary,
+
+Example:
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+myDict.pop("Model")
+
+print(myDict) #Prints, {'Brand': 'Renault', 'Colour': 'Red'}
+
+
+
+
+
+
+It is possible to the popitem() to remove the last inserted item.
+
+Example:
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+myDict.popitem()
+
+print(myDict)
+
+
+
+
+
+
+
+The del keyword can be used to delete an item or the entire dictionary completely.
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+del myDict["Brand"]
+
+print(myDict) #Prints, {'Model': 'Reliable', 'Colour': 'Red'}
+
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+del myDict
+
+print(myDict) #Results in an error as it tries to print 
+
+
+
+
+
+
+
+The clear() method can be used to empty a dictionary of all it's items.
+
+Example:
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+myDict.clear()
+
+print(myDict) #Prints, {}
+
+
+

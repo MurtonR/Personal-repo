@@ -1,0 +1,44 @@
+It is not possible to combine strings and numbers using the + operator
+
+Example:
+
+age = 25
+txt = "I am" + age + "years old"
+print(txt)
+
+
+
+
+Instead to combine strings and numbers the format() method is used, the format() method takes the arguments, formats them and places them in the spot the {} placeholders were.
+
+Example:
+
+age = 25
+txt = "I am {} years old"
+print(txt.format(age))
+
+
+
+
+You can use this method to combine an unlimited number of variables as there is no limit to the amount of placeholder {}
+
+Example:
+
+age = 25
+name = "Joe"
+numOfFriends = 12
+txt = "I am {} years old, my name is {} and I have {} friends"
+print(txt.format(age, name, numOfFriends))
+
+
+
+
+`Using index numbers you can assign each argument to a place holder.
+
+Example:
+
+age = 25
+name ="Joe"
+numOfFriends = 12
+txt = "I am {1} years old, my name is {2} and I have {0} friends"
+print(txt.format(numOfFriends, age, name))

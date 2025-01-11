@@ -1,0 +1,9 @@
+To get the length of a string, use the length() function, the size() function can be used instead but has the same effect.
+
+
+int main() {
+  string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  cout << "The length of the txt string is: " << txt.size(); -"txt" is the variable and it is with ".size()"
+  return 0;
+}
+

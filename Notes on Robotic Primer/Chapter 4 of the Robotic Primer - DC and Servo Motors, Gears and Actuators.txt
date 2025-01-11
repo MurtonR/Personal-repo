@@ -1,0 +1,148 @@
+An effector is any device on a robot that has an effect on the environment, in robots this is the equivalent to biological arms, legs and other body parts that do physical work.
+
+An actuator is the mechanism that allows an effector to execute an action or movement, these are electric motors, hydraulic or pneumatic cylinders, temperature or chemically sensitive materials, these mechanisms actiate the wheels, tracks, and any other effectors on the robot.
+
+
+
+All robots require power in order to use effectors and actuators, some intelligent designs use passive actuation, using potential energy in the mechanics of the effector and it's environment instead of active power consumption.
+
+A biological example of this are flying squirrels, these animals use skin flaps to glide through the air, this is very energy efficient for the distance they can travel and the speed at which they do so. The same principle is used in hang gliders and glider planes, both use potential energy to travel without active power consumption.
+
+An example of a robot that uses passive actuation is Tad McGeer's passive walker, which had two legs with knees that had no motors, or active actuators of any kind. However when placed at the top of a downward sloping ramp, it would walk in a human-like manner. If placed on an upward incline or a flat surface it would simply fall over.
+
+
+
+
+
+There are many types of actuators, here are a few:
+
+
+Electric motors; The most common, they are simple and the most affordable, based on the electric current.
+
+Hydraulics; These are based on fluid pressure and as the pressure changes the actuator moves. They are very powerful and precise however they are also large and very dangerous, they must be well packaged and kept from leaking.
+
+Pneumatics; These are based on air pressure and as the air pressure changes the actuator moves, they suffer from the same cons as the hydrualic actuators. They are large, dangerous, must be kept from leaking and must be well packaged.
+
+Photo-reactive materials; These materials perform physical work in response to the amount of light around them, these are called photo-reactive. Usually the amount of generated work is very small and as such these materials are usually only used in micro-scale robots
+
+Chemically-reactive materials; These materials react physically to certain types of chemicals, for example a fiber that contracts in an acidic solution but elongates in a alkaline solution, materials such as this can be used as linear actuators, provide no rotary movement
+
+Thermally-reactive materials; These materials react to changes in temperature in the environment
+
+Piezoelectric materials; These types of materials, most commonly crystals create electric charges when pushed/pressed
+
+
+
+
+Motors:
+
+Motors are the most common actuators in robotics, they are very useful at actuating wheels as they produce rotational movement, this in turn physically turns the wheels and wheels are very popular in the world of robotics.
+
+Motors can also be used to drive many other kinds of effectors.
+
+
+
+Direct current motors compared to other actuators are simple, cheap, easy to use and easy to find, they can be bought in varying sizes and packages, Direct current motors turn electrical energy into mechanical energy, using magnets, loops of wires and current to generate magnetic fields whose interactions turn the motor shaft. 
+
+
+In order to make a motor run, you need an electrical current in the correct voltage range, if the voltage is too low then the motor will run but will have less power, if the voltage is too high then the motor will run`at an increased power but will begin to wear and tear earilier, simpliar to revving a car's engine too much
+
+
+When a motor is provided with the correct voltage it will draw current proportional to the work that it is doing, work is force x distance, so when a robot is pushing against a wall it will draw more current. The reason for this is the physical resistance of the wall, resulting in a large amount of force is required to move a small distance.
+
+If the physical resistance of a wall is too high, a motor will draw the maximum current it can, and then after it has run out of options stalls.
+
+
+The more current a motor draws the more torque is produced at it's motor shaft, this is important as the amount of power a motor can generate is proportional to it's torque, the amount of power generated is also proportional to the rotational 
+velocity of the shaft.
+
+The amount of power generated is proportional to the product of both of these values (torque and rotational velocity of the shaft)
+
+
+If a motor has a high rmp(rotations per minute) it has a high rotaional velocity(speed) but low torque, and is most effective at actuating light things that rotate very fast such as fans. However in many cirumstances it is important for a motor to be able to move their bodies, turn wheels and do work, all of which requires the ability to move significant amounts of mass. In order to achieve these goals the motors need a higher torque but lower speed than off the shelf DC motors can provide, the solution to this are gears.
+
+
+
+Gearing:
+
+By combining different gears the force and torque output of a motor is changed.
+
+The force generated at the edge of a gear is equal to the ratio of the torque produce to the radius of the gear, by combining gears with different radii, the force and torque can be manipulated.
+
+
+Imagine we have two gears, one is directly connected to the shaft of the motor and is called the input gear, the other gear is referred to as the output gear. The torque generated at the output gear is proportional to the torque on the input gear and the ratio of the radii of both gears.
+
+
+There is a general rule for torque with gears:
+
+-If the output gear is larger than the input gear then the torque increases, if the output gear is smaller than the input gear then the torque decreases
+
+
+
+However the torque is not the only thing that changes, if the output gear is half the size of the input gear, then the ouput gear must undergo 2 rotations for each singular rotation of the input gear, this is reveresed if the output gear was 2 times the size of the input.
+
+
+There is a general rule for speed with gears:
+
+-If the output gear is larger than the input then the speed decreases, if the the output gear is smaller than the input then the speed increases
+
+
+
+The combined rule is:
+
+-When the output gear is larger the torque increases but the speed decreases, and as such when the output gear is smaller the torque is decreased but the speed is increased
+
+
+As such the use of larger output gears can be used to take unwanted extra spped in DC motors and use it for increased torque.
+
+
+
+Gears are combined by 'the skin of their teeth', this means that the teeth of gears need to be specially designed in order to mesh properly, if there is looseness between two gears it causes backlash, where the gear mechanism moves sloppily back and forth between the teeth without turning the whole gear.
+
+
+Backlash causes error to the positioning of the gear mechanism, this is bad for the robot as it will be unable to accurately know it's position
+
+In order to reduce backlash it requires tight meshing between the gear teeth, this however increases friction causing more energy to be wasted and as such decreases the efficiency of the mechanism.
+
+
+
+To achieve gear reduction gears of both different sizes and number of teeth must be used. For example to achieve a gear reduction of 3:1, in order to achieve this we take two gears, one large and one small, with different numbers of gear teeth. In this example the large gear is the output and will have 24 teeth, the smaller gear will be the input and will have only 8 teeth. For every full rotation of the input gear (smaller) the output gear rotates a third, using this method the torque is multiplied by 3 while the speed have been divided by 3 (the speed is now 1/3 of what it was).
+
+Of course by reversing the output and input gear the speed can be multiplied (speed up) and the torque decreased.
+
+
+Gears can be either in series or ganged, using either method gears can be put together in order to multipluy the effects they are having, for example two 3:1 gears can be used, if ordered correctly, in order to achieve a 9:1 effect. With three 3:1 gears a 27:1 effect can be achieved.
+
+The ability to multiply the reduction effect of gears is what makes motors so ubiquitous and useful, as they can be designed for varying speeds and torque to suit the niche of the robot.
+
+
+
+
+
+Motors that are able to turn their shaft to a specific position are referred to as servo motors or just servos for short as they servo to a specific position, servos are very commonly used in the creation of toys, for example the steering in an RC car, or the ability to move the wings on an RC plane
+
+
+Servo motors are DC motors with additional components:
+
+-Servos have gear reduction in order to be properly suited to the task
+
+-A position sensor in the motor shaft, in order to track how much the motor is turning and the direction it is moving
+
+-An electric circuit that tells the robot how much to turn and it in which direction
+
+
+Servo motor operation is all about getting the shaft of the motor in a desired location, this direction is either 180 degrees either way from the referrence point and as such alot of sevos are limited to 180 degrees movement instead of 360 degrees, however some are able to turn 360 degrees just by going in one direction.
+
+The amount the servo motor should turn within the 0 to 180 degree arc is specified by an electronic signal, the signal is produced as a series of pulses and when the pulse arrives the shaft of the motor turns, when no pulse arrives the shaft does stops moving, the pulse has a wave like pattern called waveform.
+
+The amount the shaft moves when the pulse arrives is determined by the duration of the pulse; the longer the pulse, the larger the turn angle (moves further from the referrence point).
+
+This is called pulse-width modulation as the duration (width) of the pulse modulates the signal, and as such the pulse must be very precise or else the motor may jitter or try to move past it's mechanical limits, in this case the 180 degree stops. In contrast the duration between the pulses is not very important as that is when the shaft is already stopped.
+
+
+
+Both contious and servo motors control the position of the shafts, most robots use position control, where the motor is driven to track the desired position at all times. This makes motor-driven actuators very accurate but also very stiff, as if the motor is distrubed it will produce a large force in order to stop the shaft moving from the desired location, this can be a negative.
+
+The solution to this is to use torque control, instead of tracking the position of the shaft the motor is driven to track the desired torque instead, this results in a motor that is significantly less stiff.
+
+Both DC and servo motors both draw significantly more power than electrical components due to then requiring the energy to do work (move the robot, interact with the physical world)

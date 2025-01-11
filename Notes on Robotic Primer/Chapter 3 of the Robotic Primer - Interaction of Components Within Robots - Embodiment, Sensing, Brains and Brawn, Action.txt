@@ -1,0 +1,125 @@
+The main components that make up a robot are:
+
+-A physical body, as it needs to exist and be able to effect the real world
+
+-Sensors in order to percieve it's environment
+
+-Effectors and actuators, so it can take actions
+
+-A controller, so it can be autonomous
+
+
+
+There are 4 main ways these components interact with eachother:
+
+
+Embodiment:
+
+Having a body is the first requirement for being a robot as it has to be able to move, interact with and achieve it's goals. A computer agent is never considered a robot as it is does not have a physical body.
+
+An embodied robot must follow the same laws of physics as the rest of reality, for example it cannot be in two places at once, nor can it change it's size or shape arbitrarily, it has to use effectors in order to move itself around. Additionally it requires energy to do all the basic tasks, thinking, sensing, moving and as such needs to have a source for such energy.
+
+
+All physical robots also need to worry about running into or bumping other physical objects and as such there needs to be  a way for the robot to avoid physical collision with both the world and in some cases itself.
+
+
+The physical body of a robot also limits how much it can physically do aswell as what else it fundementally won't be able to do, a very tall robot may not fit in small spaces, and as such it is limited by it's physical size and shape. The shape also determines how it moves, how effective each sensor will be as well as how it can interact with the real world.
+
+
+The body of a robot also influences everything that has to do with time, such as the speed at which it moves (faster robots are often seen as smarter) and how quickly it reacts to the environment.
+
+
+
+
+
+
+Sensing:
+
+Which sensors should be on a robot and where is determined by what it's niche is (environment and position in an ecosystem in this case more so a role it fufills) and the better a robot is at sensing it's environment the better it will be in that niche.
+
+
+By using sensors a robot can also know it's state, in this case it means the robot's description of itself at a point in time. The more detailed a description of a state is, the more larger the state.
+
+
+State can be both observable, partially observable and hidden. For example if a robot cannot 'feel' or 'see' it's arm then the state of that arm is hidden from the robot, however if it could both 'feel' and 'see' it's arm then the state would not be hidden and instead would be observable.
+
+
+State may also be discrete(red,yellow, 7) or continous(3.4332)
+
+
+State space consists of all the states a system can be, for example a light switch with on and off has a state space of 2 discrete variables, whereas if it had a dial for light intensity it's state space could consist of many more discrete variables or even if it has possibly infinite degrees of light intensity it would be one continous variable.
+
+Space in state space refers to all possible variations of something.
+
+
+
+External state is the state of the world as the robot can sense it, while Internal state is the state of a robot as the robot senses it.
+
+Internal state can be used to represent information about the world, for example a map of a maze, this is called representation or an internal model.
+
+In general the intelligence of a robot appears to be determined by how quickly it can sense it's environment and itself, both the external and internal states.
+
+
+All of the robot's senses put together, create the space for all possible sensory readings, this ii called the robot's sensor space, also called perceptual space.
+
+
+
+
+
+Action:
+
+Effectors enable a robot to take physical actions, to move things. Effectors use underlying mechanisms such as muscles or motors which are called actuators which do the actual work for the robot.
+
+
+Robot effectors and actuators are used for either of two main reasons:
+
+-Moving around, locomotion, moving to a new position
+
+-Manipulation, handling objects
+
+These correspond to the two major subfields of robotics:
+
+-Mobile robotics; this is concerned with robots that move around, on land, sea and air (although mainly on land)
+
+-Manipulator robotics; this is concerned more with robotic arms of various types
+
+
+It is much simpler to make a mobile robot that moves on land, as with robots that are designed to either for either water or air there are more dimensions to account for, and as such they are harder to control and make due to requiering more complex construction and code.
+
+The degrees that a manipulator robot can move in is called degrees of freedom (DoF) 
+
+
+The divide between mobile and manipulator robots is slowly disappearing as more complex robots (such as humanoid robots) combine both mobile and manipulator aspects, becoming a hybrid of both and as such are able to accomplish a wider range of task.
+
+
+
+
+
+
+Brains and Brawn:
+
+Robots are the polar opposite of animals, with a biological brain expending a large amount of energy relative to the rest of the body, whereas in robots the actuators use significantly larger amounts of energy compared to the processors running the controller (brain)
+
+
+Power issues are a major problem in modern robotics, common issues include:
+
+-Providing enough power without weighing the robot down with heavy batteries
+
+-Effectively keeping the electronics seperated from the sensors and effectors
+
+-Preventing loss of performance as power levels drop due to wearing down of batteries or a large increase in power consumption.
+
+-Replenishing energy in an autonomous, by the robot itself instead of by people
+
+
+
+
+
+Autonomy:
+
+
+Controllers provide the hardware/software that makes the robots autonomous by using the sensor inputs and any other information to decide what action to take and then finally to control the effectors to execute that action.
+
+Controllers play the role of brain and nervous system, and there is often more than one controller in order for various parts of the robot can be processed at the same time. Pseudocode is used to describe a controller without using a specific programming language.
+
+

@@ -1,0 +1,60 @@
+Variables are containers for storing data values, there are many different types of variables such as:
+-"int" stores integers (whole numbers)
+-"double" stores decimals (floating point)
+-"char" stores single characters (these values are surrounded by single quote characters)
+-"string" stores text (these values are surrounded by double quote characters)
+-"bool" stores values with two states (True or False, 1 or 0)
+
+Declaring (Creating) Variables:
+
+type variableName = value; -An example of "type" is "int" or "string"
+                           -variableName can be anything as long as it isnt already defined
+	                   -value is the data that the variable is storing
+
+
+int myNum = 15;
+cout << myNum; -This is an example of a variable called myNum which is an "int" variable with a value of 15 
+
+
+int myNum;
+myNum = 15;      -A variable can be declared "int myNum" without assigning a value til a later line "myNum = 15;"
+cout << myNum;
+
+
+int myNum = 15;  // myNum is 15
+myNum = 10;  // Now myNum is 10   -A variable that is assigned a new value later on, overwrites the last value
+cout << myNum;  // Outputs 10
+
+
+int main() {
+  int myNum = 20;   // Now myNum is 20
+  cout << myNum << endl;  // myNum is printed as 20   -This is more obvious when run and uses a escape sequence "endl" 
+  myNum = 30;       // Now myNum is 30
+  cout << myNum;  // myNum is printed as 30
+}
+
+
+These are example of different variables:
+
+-int myNum = 5;               // Integer (whole number without decimals)
+-double myFloatNum = 5.99;    // Floating point number (with decimals)
+-char myLetter = 'D';         // Character -Note single quote characters
+-string myText = "Hello";     // String (text) -Note double quote characters
+-bool myBoolean = true;       // Boolean (true or false)
+
+
+int main() {
+  int myAge = 19;  -"cout" along with "<<" at beginning and end can be used to output a variable
+  cout << "I am " << myAge << " years old.";  // This outputs "I am 19 years old
+  return 0;
+}
+  
+
+int x = 5;   -Variables can be added by using the "+" character however "sum =" must be used beforehand
+int y = 6;
+int sum = x + y;
+cout << sum;
+
+
+
+

@@ -1,0 +1,10 @@
+It is possible to loop through a set using the for keyword.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+for x in mySet:
+     print(x)
+
+

@@ -1,0 +1,13 @@
+Representation:
+
+'Representation' is the form that information is stored or encoded in the robot. In robotics we think of 'memory' as the storage device where information is stored, which means it cannot be used as a replacement for representation. Representation is the form that the information is stored and how it is encoded (numbers, co-ordinates, distances, colours, locations) whereas the memory is just a place for storing info.
+
+Representation of the world around is usually called a 'world model' and one of the most common world models are maps.
+
+Here are some ways a robot could make a world model for making its way through a maze:
+
+-The robot may remember the exact way it got throught the maze (3.6cm forward, turn clockwise 34 degrees) this type of path 'odometric'. This type is very specific and detailed however is not useful if any junctions change or get blocked, additionally it relies on the robot being able to track distances and angles very precisely.
+
+-The robot may only rememeber the movements it did at particular landmarks in the environment (left at the first junction, right at the second junction, right at the third junction) this is called a landmark-based path. A landmark based path is simple as it only relies on the landmarks and not specifics, however it is still not useful if a juction changes or is blocked. A landmark based map would be something like (red/green junction turn right, blue/yellow junction turn left) this is not a path as it remembers what to do at each junction even if they're out of order. A group of landmarks with links is called a topological map as it describes the 'topology' (the connections among the landmarks). A landmark based map is similiar to a landmark based path it terms of its pros and cons, however it also stores the lan dmarks in a network and the connections between them.
+
+-The robot may remember the maze by drawing it using exact lengths of corridors and distances between the walls it sees, this is a metric map of the maze and is also very useful. A metric map is more complex but is very useful if the maze changes or part is blocked as the robot can attempt to find other routes around the problem. This does mean it needs to store significantly more information about its environment.

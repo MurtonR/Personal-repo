@@ -1,0 +1,65 @@
+You can use a comparison operator, such as the greater than (>) operator, to find out if an expression (or variable) is true or false:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 10;
+  int y = 9;
+  cout << (x > y);
+  return 0;
+}
+
+In the examples below, we use the equal to (==) operator to evaluate an expression:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 10;
+  cout << (x == 10);  -This returns 1 as x is equal to 10 (x == 10)
+  return 0;
+}
+
+ 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << (10 == 15);  -This returns 0 as 10 is not equal to 15 (10 == 15)
+  return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int myAge = 25;
+  int votingAge = 18;
+  
+  cout << (myAge >= votingAge);  // returns 1 (true), meaning 25 year olds are allowed to vote!
+  return 0;
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int myAge = 25;
+  int votingAge = 18;
+
+  if (myAge >= votingAge) {
+    cout << "Old enough to vote!";
+  } else {                               -Can use "else" in order to have a response to both "True" (1) and "False" (0)
+    cout << "Not old enough to vote.";
+  }
+  return 0;
+}
+
+

@@ -1,0 +1,29 @@
+Assignment operators are used to assign values to variables, such as "=" (int x = 10;)
+
+The assignment operator "+=" is used to add a value to a variable
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 10;
+  x += 5;      -Adds "5" to "x" which has a value of "10" 
+  cout << x;   -Outputs "5" + "x" which equals "15"
+  return 0; 
+}
+
+
+
+
+Operator    Example	     Same As	
+"="	    x = 5            x = 5	
+"+="	    x += 3	     x = x + 3	
+"-="	    x -= 3	     x = x - 3	
+"*="	    x *= 3           x = x * 3	
+"/="	    x /= 3	     x = x / 3	
+"%="	    x %= 3	     x = x % 3	-Modulus operation that gives the remainder left when divided
+"&="	    x &= 3	     x = x & 3	-AND operation using the binary equivilant of each number
+"|="	    x |= 3	     x = x | 3	-OR operation using the binary equivilant of each number
+"^="	    x ^= 3	     x = x ^ 3	-XOR operation using the binary equivilant of each number
+">>="	    x >>= 3	     x = x >> 3	-Shift it right by three bits 
+"<<="	    x <<= 3	     x = x << 3 -Shift it left by three bits (101 becomes 101000)	

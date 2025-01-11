@@ -1,0 +1,23 @@
+To join one or more tuples the + operator can be used.
+
+Example:
+
+fruit = ("apple", "banana", "orange")
+veg = ("potato", "carrot", "pepper")
+
+healthyFood = fruit + veg
+
+print(healthyFood) #Prints, ('apple', 'banana', 'orange', 'potato', 'carrot', 'pepper')
+
+
+
+
+Tuples can also be multiplied.
+
+Example:
+
+fruit = ("apple", "banana", "orange")
+
+moreFruit = fruit * 3
+
+print(moreFruit) #Prints, ('apple', 'banana', 'orange', 'apple', 'banana', 'orange', 'apple', 'banana', 'orange')

@@ -1,0 +1,176 @@
+Python Inheritance:
+
+Inheritance allows us to define a class that inherits all the methods and properties from another class.
+
+Parent Class- The class that is being inherited from, also called the base class
+
+Child Class- The class that inherits from another class, also called the derived 	     class
+
+
+
+Any class can be a parent class, so the syntax is the same as creating any other class.
+
+Example:
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+   def pN(self):
+       print(self.name, self.age)
+
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+       print(self.name, self.age)
+   def pN(self):
+       pass
+      
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+
+
+In order to create a child class we use the parent class as a parameter.
+
+Example:
+
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+   def pN(self):
+       print(self.name, self.age)
+
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+class President(Person):
+    pass
+
+POTUS = President("Donald", 74)
+POTUS.pN() #Prints, Donald 74
+
+
+
+
+We can add the __init__() function to the child class instead of the pass keyword. When you add the __init__() function the child class will no longer inherit their parent's __init() function. In order to keep the inheritance of the __init__() function, add a call to the parent's __init__() function.
+
+Example:
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+   def pN(self):
+       print(self.name, belf.age)
+
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+class President(Person):
+    def __init__(self, name, age):
+        Person.__init__(self, name, age)
+
+POTUS = President("Donald", 74)
+POTUS.pN() #Prints, Donald 74
+
+
+
+
+The super() function can be used to make a child class inherit all the methods and properties from its parents. By using the super() function we do not need to use the name of the parent element as it will automatically inherit the methods and properties from its parent.
+
+Example:
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+   def pN(self):
+       print(self.name, self.age)
+
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+class President(Person):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+POTUS = President("Donald", 74)
+POTUS.pN() #Prints, Donald 74
+
+
+
+
+You can add properties to the child class.
+
+Example
+
+class Person:
+   def __init__(self, name, age):
+       self.name = name
+       self.age = age
+   def pN(self):
+       print(self.name, self.age)
+
+
+P1 = Person("Joe", 80)
+P1.pN() #Prints, Joe 80
+
+
+class President(Person):
+    def __init__(self, name, age, num):
+        super().__init__(name, age)
+        self.presnum = num
+
+POTUS = President("Donald", 74, 45)
+print(POTUS.presnum) #Prints, 45
+
+
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+
+x = Student("Mike", "Olsen", 2019)
+x.welcome()
+
+
+
+
+
+
+
+
+
+
+

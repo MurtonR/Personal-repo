@@ -1,0 +1,52 @@
+When a tuple is created and the values are assigned this is called packing.
+
+Example:
+
+myTuple = ("Joe", "Biden")
+
+print(myTuple) 
+
+
+
+
+In python it is possible to extract the values back out into variables, this is called unpacking, however the number of variables must match the number of items, or an * must be used to collect the remainin values into a list.
+
+Example:
+
+myTuple = ("Hello", "Joe", "Biden")
+
+greeting, firstName, lastName = myTuple
+
+print(greeting)
+print(firstName)
+print(lastName)
+
+
+
+
+
+This is very useful, however the number of variables must match the number of items, or an * must be used to collect the remainin values into a list. If the * is not on the last variable it will collect all the items in a list until the number of items left is equal to number of variables without assigned values.
+
+Example:
+
+myTuple = ("apple", "banana", "orange", "melon")
+
+green, yellow, *orange = myTuple
+
+print(green) #Prints, apple
+print(yellow) #Prints, banana
+print(orange) #Prints, ['orange', 'melon'] , the values after the asterisks are turned into a list
+
+
+
+myTuple = ("apple", "banana", "orange", "melon")
+
+green, *mixed, orange = myTuple
+
+print(green) #Prints, apple
+print(mixed) #Prints, ['banana', 'orange']
+print(orange) #Prints, melon
+
+
+
+

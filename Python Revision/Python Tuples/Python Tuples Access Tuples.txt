@@ -1,0 +1,37 @@
+Accessing Tuples is the exact same as Lists.
+
+Example:
+
+myTuple = ("Joe", "Biden", "Nice", "Winning", "Happy")
+
+print(myTuple[0]) #Prints, Joe
+
+print(myTuple[1:4]) #Prints, ('Biden', 'Nice', 'Winning')
+
+print(myTuple[-1]) #Prints, ('Happy')
+
+print(myTuple[-4:-1]) #Prints, ('Biden', 'Nice', 'Winning')
+
+print(myTuple[:3]) #Prints, ('Joe', 'Biden', 'Nice')
+
+print(myTuple[1:]) #Prints, ('Biden', 'Nice', 'Winning', 'Happy')
+
+print(myTuple[-4:]) #Prints, ('Biden', 'Nice', 'Winnin', 'Happy')
+
+print(myTuple[:-1]) #Prints, ('Joe', 'Biden', 'Nice', 'Winning')
+
+
+
+
+You can use the in keyword to check if an item is present in a tuple.
+
+Example:
+
+myTuple = ("Banana", "Apple", "Cherry", "Mango")
+
+if "Cherry" in myTuple:
+    print("Cherry is in myTuple")
+
+
+
+

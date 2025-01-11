@@ -1,0 +1,96 @@
+A robotic manipulator is an effector, it could be an arm , hand or any other body part that is used to affect and move objects in the environment.
+
+Manipulation is any goal-driven movement of any type of manipulator.
+
+Manipulator links are the indivual components of the manipulator that are controlled independently, for example the upper arm would be one link and the lower arm (forearm) is another.
+
+
+The endeffector is the part of the manipulator that affects the world, for example on a hand it would be the finger that pokes, on a leg it would be the foot.
+
+
+Contrary to locomotion where the body moves itself in order to get to the desired position and orientation, whereas a manipulator moves itself to get the endeffector to the desired 3-dimension position and orientation.
+
+Because an eneffector is attached to a manipulator and that manipulator is attached to the whole body, the manipulator must move carefully in order to avoid it's own joint limit (extreme of how far the joint can move) , the robot's body and any obstacles in the environment, as such the path that the manipulator and body take in order to achieve a desired task by moving the endeffector to the correct position and orientation can be very complex.
+
+It also requires the robot to compute the available free space of the manipulator and body, free space being the space in which movement is possible and then searching the space for an available path.
+
+Due to this being very complex, autonomous manipulation is very challenging.
+
+
+
+
+Teleoperation:
+
+Teleoperation means controlling a machine from a distance, remote control is not the used the same. As the term teleoperation is used for controlling a complex manipulator or rover whereas remote control is used for simplier manipulators or for example a toy car.
+
+The term remote control is not used in robotics even though it means basically the same as teleoperated.
+
+
+There are many challenges to puppeteering complex mechanisms:
+
+-Complexity of mechanisms; The more DOF that a mechanism has the more complex it is and as such the more difficult to control.
+
+-Constraints of the interface; Initially joysticks were the most common interface between a teleoperator and the arm being controlled, however it is very difficult to use the joystick to control a very complicated mechanical arm, such as a human-like arm with 7 DOF requires a great deal of skill and concentration.
+
+-Limitations of sensing; It is difficult to control an arm without feeling what it touches and where it moves, as well as feeling the touch and resistance as it interacts with the environment.
+
+
+Teleoperation has had success in some very complex domains, such as robot-assisted surgery.
+
+As the robot moves inside the patients body to cut and suture (sew up) inside the body, this can be very useful in certain circumstances as it is minimally invasive compared to cutting open a patient's chest then cracking their ribs to get to the heart. Instead you can use teleoperation in order to only cut three holes and push in the manipulators.
+
+
+
+
+Exoskeleton means outside skeleton and in robotics means a structure that a human wears to either increase their strength or to teleoperate a mechanism, in teleoperation it is used to sense the movements and forces that a human produces in order to teleoperate a machine. Because they do not act autonomously (make decisions and act on them) they are merely shells.
+
+
+In summary teleoperation is a way to make controlling complex manipulators simplier.
+
+
+
+
+
+Manipulation:
+
+As in locomotion the issue is there is no direct or obvious connection between what the effector needs to do physical space in order to achieve it's goal and what the actuator does to move the effector so it can achieve it's goal.
+
+
+The corrospondence between the actuator's movement and the resulting effector motion is called kinematics.
+
+Kinematics consist of the structure of the manipulator, describing what is attached to what.
+
+
+The various parts (links) of a manipulator are connected by joints.
+
+The two most common types of joints are:
+
+-Rotary (ball and socket); provides rotational movement around a fixed axis
+
+-Prismatic (like a piston); provides linear movement
+
+Simulating anthromophic movement is almost impossible due to the difficult of recreating how humans use rotary joints with muscles (linear actuators) whereas robots almost always use motors which provide rotational force, the use of artifical muscles is being tested however it is incredibly complex and difficult to do this due to the challenge of making them strong and light enough for it to provide enough force for the movement of the armature.
+
+
+
+One of the main difference between human hands and the average robot manipulator is that the human hand is a general-purpose tool able to achieve multiple tasks very easily. However robot manipulators are usually highly-specialised, some have an attached tool at the endpoint (Welder, paint sprayer or shovel are examples) and these in some robots can be swapped.
+
+Some more specialised robots can pick up and use tools designed for multiple circumstances, and some robots have incredibly complex robotics hands that can achieve almost the same tasks that human hands can naturally, for example NASA's Robonaut humanoid robotic torso that has arms that can fix problems on the space station in theory.
+
+In order to control a robot manipulator we need to know its kinematics, the amount of DOF for each joint, how many joints there are, what is attached to what and so on.
+
+Using these and mathematics can be used to solve manipulation problems, problems about where the endpoint is relative tot the rest of the arm and how to generate paths for the manipulator to follow in order to achieve it's objective.
+
+
+
+In order to move the endeffector of a manipulator to a desired position and orientation in order to achieve a goal we would usually need to compute the angles for the joints of the whole manipulator. This conversion from a cartesian (x,y,z) position of the endpoint and the angles of whole manipulator is called inverse kinematics.
+
+
+Dynamics refers to the properties of motion and energy of a moving object. The faster a robot moves the more significant it's dynamics, and as such a slow moving mouse-like robot designed to navigate mazes is less effected by dynamics than a fast moving baseball throwing robot.
+
+
+Grasp points are where to put the fingers relative to the centre of gravity, friction, obstacles etc.
+
+Compliance yielding to the environment is required for tasks with close contact, for example sliding across a surface.
+
+For robots to be able to accomplish human tasks it has to be able manipualte a variety of objects in various situations and be able to correctly position it's manipulators in order to correctly interact with the environment.

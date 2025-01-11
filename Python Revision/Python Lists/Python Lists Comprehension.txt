@@ -1,0 +1,130 @@
+List comprehension allows a shorter code when you want to create a new list based on the existing values of one list, here is an example for if you want a list of fruits with "a" in their names based on an already existing ,list of fruit.
+
+This is what you would have to do if you didn't use list comprehension.
+
+Example:
+
+fruits = ["apples", "Cherry", "grapes", "mangos"]
+aFruits = []
+
+for x in fruits:
+    if "a" in x:
+     aFruits.append(x)
+
+print(aFruits) #Prints, ['apples', 'grapes', 'mangos']
+
+
+
+
+
+With list comprehension it is possible to do all that with only one line of code.
+
+Example:
+
+fruits = ["apples", "cherry", "grapes", "mangos"]
+
+aFruits = [x for x in fruits if "a" in x]
+
+print(aFruits)
+
+
+
+
+
+This is the baic concept, the return value is a new list, leaving the original unchanged.
+
+newlist = [expression for item in iterable if condition == True]
+
+
+
+
+The condition part is a filter that only accepts items that result in a true answer, the condition is optional and if there is no condition then the lists are the same.
+
+Example:
+
+fruits = ["apples", "cherry", "grapes", "mangos"]
+
+aFruits = [x for x in fruits if "a" not in x] 
+
+print(aFruits) #Prints, ['cherry'] , as only items without "a" are included in the new list
+
+
+
+fruits = ["apples", "cherry", "grapes", "mangos"]
+
+aFruits = [x for x in fruits if "ap" in x] 
+
+print(aFruits) #Print, ['apples', 'grapes'] , as both of them contain "ap"
+
+
+
+
+numbers = [1, 3, 6, 12, 10, 42, 5, 6]
+
+newNumbers = [x for x in numbers if 3 < x < 12]
+
+print(newNumbers) #Prints, [6, 10, 5, 6] , these are the items that are less than 12 but greater then 3
+
+
+
+
+
+The iterable part can be anything that is iterable, such as a list, tuple, set, the range() method can also be used to
+ create an iterable.
+
+Example:
+
+myNum = [x for x in range(1,20) if x != 10]
+
+print(myNum) #This prints every number from 1 to 19 apart from 10
+
+
+
+myTxt = [x for x in "Joe Biden" if "J" in x]
+
+print(myTxt) #Prints, ['J']
+
+
+
+The expression is both the current item in the iteration but also the outcome that can be manipulated before it becomes an item in the new list.
+
+Example:
+
+myOldTxt = ["Joe", "Biden", "Nice"]
+
+myNewTxt = [x.lower() for x in myOldTxt]
+
+print(myNewTxt) #Prints, ['joe', 'biden', 'nice']
+
+
+
+
+myOldTxt = ["Joe", "Biden", "Nice"]
+
+myNewTxt = ["Trump" for x in myOldTxt]
+
+print(myNewTxt) #Prints, ['Trump', 'Trump', 'Trump']
+
+
+
+myOldTxt = ["Joe", "Biden", "Nice"]
+
+myNewTxt = [x if x == "Nice" else "Trump" for x in myOldTxt]
+
+print(myNewTxt) #Prints ['Trump'] when then the item is not ['Nice']
+
+
+
+
+myOldTxt = ["Joe", "Biden", "Nice"]
+
+myNewTxt = [x if "n" in x else "Trump" for x in myOldTxt]
+
+print(myNewTxt)
+
+
+
+
+
+
+

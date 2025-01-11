@@ -1,0 +1,51 @@
+The print() function is commonly used to output variables.
+
+Example:
+
+x = 5
+
+print(x)
+
+
+The print() function can also be used in order to output multiple variables in one line.
+
+Example:
+
+x = 5
+y = "Hello!"
+z = 9.64
+
+print(x, y, z)
+
+
+The + character can also be used to output multiple variables at once using the print() function, there is a space at the end of each variable value in order for it to print as three seperate words, also you cannot add string and integer variables.
+
+Example:
+
+x = "Welcome "
+y = "Hello! "
+z = "Joe"
+
+print(x + y + z)
+
+
+When used for two variables that are numbers the + becomes a mathematical operator (5 + 10 = 15).
+
+Example:
+
+x = 5
+y = 10
+
+print(x + y)
+
+
+The best way to print multiple variables in the print() function is to the comma character, as this works for all variable types.
+
+Example:
+
+x = 5
+y ="Hello!"
+
+print(x, y) #This results in an output of, 5 Hello!
+
+

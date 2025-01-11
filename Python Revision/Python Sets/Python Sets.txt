@@ -1,0 +1,64 @@
+Sets are unordered, unchangeable, unindexed and do not allow duplicate items.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+
+
+
+
+As sets are unordered, the items will appear in a different order each time it is used and cannot be referrenced by index or key.
+
+
+
+
+Sets are also unchangeable, which means once created the items in a set cannot be changed, however items can still be removed and added.
+
+
+
+
+Sets do not allow duplicate items.
+
+Example:
+
+mySet = {"apple", "banana", "cherry", "apple"}
+
+print(mySet) #Prints, {'cherry', 'banana', 'apple'} , each item can only appear once, duplicates are removed
+
+
+
+
+
+
+In sets the values of 1 and True are considered to be the same and as such cannot appear in the same set, False and 0 are also considered the same value.
+
+Example:
+
+mySet = {1, 2, 0, True, False}
+
+print(mySet) #Prints, {0, 1, 2} , removes True and False as it considers them the same as 1 and 0 respectively
+
+
+
+
+It is possible to make a set by using the set() constructor.
+
+Example:
+
+myList = ["Joe", "Joe", "Biden", "Nice"]
+
+myList = set(myList)
+
+print(myList) #Prints, {"Nice", "Joe", "Biden"} , removes the duplicates and is unordered so the order is random.
+
+
+
+
+myTxt = "Apple"
+
+myTxt = set(myTxt)
+
+print(myTxt) #Prints, {'p', 'e', 'A', 'l'} , random order and removes one of the p as it is a duplicate value
+
+

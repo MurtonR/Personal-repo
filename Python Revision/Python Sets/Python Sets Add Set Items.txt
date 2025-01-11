@@ -1,0 +1,44 @@
+In order to add items to a set after it has been created use the set() method.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.add("Joe")
+
+print(mySet) #Prints, {'cherry', 'Joe', 'banana', 'apple'} , the new item is not added to the end as sets are unordered
+
+
+
+
+
+
+In order to add sets together use the update() method.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+myOtherSet = {"potato", "carrot", "turnip"}
+
+mySet.update(myOtherSet)
+
+print(mySet) #Prints, {'turnip', 'potato', 'cherry', 'carrot', 'banana', 'apple'}
+
+
+
+
+
+The object added with the update() method does not have to be a set but instead any iterable.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+myTxt = "Joe"
+
+mySet.update(myTxt)
+print(mySet) #prints, {'cherry', 'banana', 'o', 'e', 'J', 'apple'}
+
+
+

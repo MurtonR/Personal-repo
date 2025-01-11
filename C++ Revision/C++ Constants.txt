@@ -1,0 +1,26 @@
+The "const" keyword can be used to make the value of a variable unchangeable and read-only (this declares the variable as constant)
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+  const int myNum = 15;
+  myNum = 10;            -This code when run results in an error as there is an attempt to change the value of the constant variable "myNum"
+  cout << myNum;         -If run without the line above the code works and outputs 15
+  return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  const int minutesPerHour = 60;  -This is an example of multiple variables being declared as constants as their values do not change.
+  const double PI = 3.14;         -"double" or "float" can be used the only difference is that "float" has less decimal places
+  cout << minutesPerHour << "\n";
+  cout << PI;
+  return 0;
+}
+
+You should always declare variables if they're unlikely to change.

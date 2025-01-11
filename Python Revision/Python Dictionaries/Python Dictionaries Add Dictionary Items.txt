@@ -1,0 +1,25 @@
+You can either add items by referring to the key and then the value, or by using the update() method.
+
+Example:
+
+myDict = {
+    "Type": "Fruit",
+    "Name": "Apple",
+    "Colour": "Green"
+}
+myDict["Taste"] = "Good"
+
+print(myDict) #Prints, {'Type': 'Fruit', 'Name': 'Apple', 'Colour': 'Green', 'Taste': 'Good'}
+
+
+
+
+myDict = {
+    "Type": "Fruit",
+    "Name": "Apple",
+    "Colour": "Green"
+}
+
+myDict.update({"Taste": "Good"})
+
+print(myDict) #Prints, {'Type': 'Fruit', 'Name': 'Apple', 'Colour': 'Green', 'Taste': 'Good'}
