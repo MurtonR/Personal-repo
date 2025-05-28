@@ -1,0 +1,35 @@
+﻿  Sort testing.cpp
+C:\re[\comp203-rm\Sort testing\Sort testing.cpp(79,17): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+  Sort testing.vcxproj -> C:\re[\comp203-rm\Sort testing\x64\Debug\Sort testing.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  Set-Content : Could not find a part of the path 'C:\Sort testing\x64\Debug\vcpkg.applocal.log'.
+  At C:\Users\MaxSq\source\repos\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:12 char:5
+  +     Set-Content -Path $copiedFilesLog -Value "" -Encoding UTF8
+  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\Sort testing...kg.applocal.log:String) [Set-Content], DirectoryNotFo 
+     undException
+      + FullyQualifiedErrorId : GetContentWriterDirectoryNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+   
+  Resolve-Path : The specified wildcard character pattern is not valid: re[
+  At C:\Users\MaxSq\source\repos\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:75 char:23
+  +     $baseBinaryPath = Resolve-Path $targetBinary -erroraction stop
+  +                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : NotSpecified: (:) [Resolve-Path], WildcardPatternException
+      + FullyQualifiedErrorId : RuntimeException,Microsoft.PowerShell.Commands.ResolvePathCommand
+   
+  Resolve-Path : The specified wildcard character pattern is not valid: re[
+  At C:\Users\MaxSq\source\repos\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:88 char:29
+  + ...      $targetBinaryPath = Resolve-Path $targetBinary -erroraction stop
+  +                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : NotSpecified: (:) [Resolve-Path], WildcardPatternException
+      + FullyQualifiedErrorId : RuntimeException,Microsoft.PowerShell.Commands.ResolvePathCommand
+   
+  Split-Path : Cannot bind argument to parameter 'Path' because it is null.
+  At C:\Users\MaxSq\source\repos\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:94 char:35
+  +     $targetBinaryDir = Split-Path $targetBinaryPath -parent
+  +                                   ~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
