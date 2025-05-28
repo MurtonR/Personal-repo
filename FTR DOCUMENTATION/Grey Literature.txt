@@ -1,0 +1,9 @@
+Grey Literature:
+
+https://www.youtube.com/watch?v=a_UiYOO-Sdw - Video on face tracking with Arduino.
+
+https://www.youtube.com/watch?v=jsXolwJskKM - Video on smooth movement with a animatronic face.
+
+https://www.youtube.com/watch?v=yWrldOS6xBw - Video on creating the mold and making smooth rubber skin for animatronic faces. 
+
+https://www.instructables.com/Add-Voice-to-Your-Arduino-Projects-Without-Using-A/  - Audio with voice without any voice lines
