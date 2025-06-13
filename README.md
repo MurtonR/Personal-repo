@@ -9,4 +9,4 @@ This is a collection of the work I've done and resources I've created for myself
 I could not recover all of my work, the robotic arm for example is stuck with an early prototype of the code which I will get round to fixing eventually.
 
 --
-I've now added most of the work from the second year of Uni, this includes a research paper, poster and my work on our face tracking robot.
+I've now added most of the work from the second year of Uni, this includes a research paper, poster and my work on the face tracking robot.
