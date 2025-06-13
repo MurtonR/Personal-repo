@@ -1,0 +1,31 @@
+Ohm's Law:
+
+V - Voltage
+
+I - Current 
+
+R - Resistance
+
+
+V = IR
+
+R = V/I
+
+I = V/R
+
+-Important for calculating what resistors will be needed.
+
+
+To calculate Power:
+
+P - Power
+
+
+P = VI
+
+P = (I^2)R
+
+P = (V^2)/R
+
+
+

@@ -1,0 +1,57 @@
+Variables that are created outside of a variable are considered global variables and can be used by anyone both inside and outside of variables
+
+Example:
+
+x = 5
+
+def MyFunc():
+    print("Im not", x)
+
+
+MyFunc()
+
+
+
+If you create a variable with the same name as an existing variable inside of a function it is only useable inside that function and doesn't effect the global variable at all, a variable created inside a function is considered local.
+
+Example:
+
+x = 5
+
+def MyFunc():
+    x = 9
+    print("Im not",x) #prints, Im not 9
+
+MyFunc()
+
+print("Im not",x) #prints, Im not 5
+
+
+
+It is possible to create a variable inside a function that is global and not local by using the global keyword.
+
+Example:
+
+def MyFunc():
+    global x
+    x = 9
+
+MyFunc()
+
+print(x)  #Prints, 9 , even though the variable was created within a function
+
+
+
+If you want to change a variable inside of a function the global keyword is required.
+
+Example:
+
+x = 5
+
+def MyFunc():
+    global x
+    x = 9
+
+MyFunc()
+
+print(x) #prints, 9 ,the value of global variable x was changed within a function by using the global keyword

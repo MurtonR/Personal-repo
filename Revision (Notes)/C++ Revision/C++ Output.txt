@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World!";        -In a function "cout" can be used multiple times in order to print/output.
+  cout << "I am learning C++";
+  return 0;
+}

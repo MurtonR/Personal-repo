@@ -1,0 +1,59 @@
+The remove() method can be used to remove a specific item from a list
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+myList.remove("Joe!")
+print(myList)
+
+
+
+
+The pop() method will remove a specific index from a list , there is no need to use square brackets when referring to the specific index number, if no index number is referrenced then the last item is deleted.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+myList.pop(2)
+print(myList) #Prints, ['Joe!', 'Biden']
+
+myList = ["Joe!", "Biden", "Nice!"]
+myList.pop()
+print(myList) #Prints, ['Joe!', 'Biden']
+
+
+
+
+
+The del keyword can be used similarly to the pop() method to remove a specific index, however it can also be used to delete the list entirely.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+del myList[0]
+print(myList) #Prints, ['Biden', 'Nice!']
+
+
+
+myList = ["Joe!", "Biden", "Nice!"]
+del myList
+print(myList) #Prints nothing as the list has been deleted completely
+
+
+
+
+
+The clear() method empties the list and removes all items but the list still remains but empty, unlike the del keyword that completely deletes the contents and the list together.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+myList.clear()
+print(myList) #Prints, []
+
+
+
+
+
+
+

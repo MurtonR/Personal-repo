@@ -1,0 +1,5 @@
+There are only two built-in methods that can be used with tuples.
+
+
+count()		Returns the number of times a specified value occurs in a tuple
+index()		Searches the tuple for a specified value and returns the position of where it was found

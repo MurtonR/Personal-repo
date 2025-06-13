@@ -1,0 +1,28 @@
+string txt = "We are the so-called "Vikings" from the north.";
+
+-This results in an error as the double quote character is misunderstood
+ 
+Escape character	Result	        Description
+\'	                '	        Single quote
+\"	                "               Double quote
+\\                 	\               Backslash
+
+
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  string txt = "We are the so-called \"Vikings\" from the north."; -For a "string" the backslash escape character is used
+  cout << txt;
+  return 0;
+}
+
+
+Escape           Character	
+\n	         New Line	
+\t	         Tab

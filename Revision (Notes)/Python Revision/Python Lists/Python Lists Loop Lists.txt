@@ -1,0 +1,43 @@
+Using the for and in keywords it is possible to loop through a list.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+for x in myList:
+    print(x)
+
+
+
+
+Using the range() and len() methods it is possible to loop through the list's items by referring to the index numbers.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+for i in range(len(myList)):
+    print(myList[i])
+
+
+
+
+By using the while keyword it is also possible to loop through a list.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+i = 0
+while i < len(myList):
+    print(myList[i])
+    print(i)
+    print() 
+    i = i + 1
+
+
+
+
+Using loop comprehension it is possible to create a short for loop that will loop through all the items in a list.
+
+Example{
+
+myList = ["Joe!", "Biden", "Name!"]
+[print(x) for x in myList]

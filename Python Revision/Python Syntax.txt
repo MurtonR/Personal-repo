@@ -1,5 +1,0 @@
-Indentations are incredibly important in python and all lines of code in a block must have the same indentations or an error willl occur.
-
-However seperate blocks of code do not need the same amount of indentation, although it would be wise to use the same amount.
-
-Most programmers prefer to use 4 spaces for indentations, however as long as it's more than one it will not result in an error

@@ -1,0 +1,13 @@
+import serial
+import pyautogui
+import time
+
+# Initialize the serial connection (adjust the port as needed)
+arduino = serial.Serial(port='COM5', baudrate=115200)
+
+while True:
+    x, y = pyautogui.position()
+    data = f"{x},{y}\n"  # Format the data (e.g., "X,Y\n")
+    arduino.write(data.encode())  # Send the data to Arduino
+    print(data)
+    time.sleep(0.1)  # Add a delay if needed to import serial

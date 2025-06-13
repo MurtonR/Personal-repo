@@ -1,0 +1,155 @@
+This is an example of when the if keyword would be used.
+
+Example:
+
+a = 12
+b = 21
+if b > a:
+    print("b is a larger number than a")              
+
+
+
+
+The elif keyword is used "if the previous conditions are false then try this".
+
+Example:
+
+a = 12
+b =12
+if b > a:
+    print("b is larger than a")
+elif b == a:
+    print("b is equal to a ")
+
+
+
+
+
+The else keyword is used when none of the conditions are true.
+
+Example:
+
+a = 12
+b = 11
+if b > a:
+    print( "b is larger than a")
+elif b == a:
+    print("b is equal to a")
+else:
+    print("b is less than a")
+                                                                        
+
+
+myTuple = ("Joe", "Biden", "Nice")
+if "Joe" in myTuple:
+    print("Joe is present")
+else:
+    print("Joe is not present")
+
+
+
+mySet = {"Joe", "Biden", "Nice"}
+while len(mySet) > 0:
+    print(mySet)
+    mySet.pop()
+else:
+    print("There are no more items in mySet")    
+
+
+
+
+
+
+If both if and else only have one line to exexute it is possible put it all on one line.
+
+Example:
+
+a = 2
+b = 3
+print("a is bigger than b") if a > b else print("a is not bigger than b")          
+
+
+
+
+The and keyword is a logical operator and is used to combine statements.
+
+Example:  
+
+a = 100
+b = 200
+c = 300
+
+if c > b and b > a:
+    print("c is the largest, then b and finally a is the smallest number")         
+
+
+
+
+
+
+The or keyword is a logical operator and is used to combine conditional statements.
+
+Example:
+
+a = 600
+b = 400
+c = 100
+if a > b or a > c:
+    print("a is larger than atleast one other variable")
+
+
+
+
+
+
+The not keyword is a logical operator and is used to reverse a condition.
+
+Example:
+
+a = 12
+b = 13
+if not a > b:
+    print("a is not larger than b")
+else:
+    print("a is larger than b")
+                                                       
+
+
+
+
+
+You can have an if statement inside an if statement, this is called a nested if statement.
+
+myTxt = "Joe Biden"
+
+if "J" in myTxt:
+    print("J is in myTxt")
+    if "B" in myTxt:
+        print("and so is B")
+    else:
+        print("J and B are not present in myTxt")       
+
+
+
+x = 52
+
+if x > 10:
+    print("x is greater than 10")
+    if x > 50:       
+        print("and 50")
+    else:           
+        print("x is less than 11")              
+
+
+
+
+
+An if statement must have content, the pass statement can be used in order for it to not result in an error.
+
+Example:
+
+a = 23
+b = 200
+
+if b > a:
+    pass

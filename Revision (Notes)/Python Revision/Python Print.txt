@@ -1,0 +1,11 @@
+The (print) command can be used to output a message, the message itself has to begin and end with a double quote character
+
+Can also use escape sequences (/n) (/t) (//) (/") to skip line, horizontal tab, backspace character, double quote
+
+
+Example:
+
+print("I weigh more than thirty elephants")
+
+
+

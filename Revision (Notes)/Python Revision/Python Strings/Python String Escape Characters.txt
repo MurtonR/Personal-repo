@@ -1,0 +1,21 @@
+There are certain characters that are illegal to use in strings (" is one example), in order to add these simply use an escape character, an escape character is the backslash character (\) followed by any character that you want to add to the string.
+
+Example:
+
+a = "He said \"Wow\" I can't believe it"
+print(a)
+
+
+
+
+There are many escape characters, these are the important.
+
+\'	Single Quote	
+\\	Backslash	
+\n	New Line	
+\r	Carriage Return	 #This drops anything after it down a line
+\t	Tab	
+\b	Backspace	
+\f	Form Feed	
+\ooo	Octal value	#Convets integers into characters
+\xhh	Hex value       #Converts hex to characters

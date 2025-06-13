@@ -1,1 +1,0 @@
-# Store your image and video files here

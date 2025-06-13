@@ -1,0 +1,58 @@
+# Video files
+*.mp4   binary
+*.mov   binary
+*.avi   binary
+*.mkv   binary
+*.flv   binary
+*.wmv   binary
+*.webm  binary
+*.m4v   binary
+
+# Photo files
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.bmp   binary
+*.tiff  binary
+*.tif   binary
+*.svg   binary
+*.webp  binary
+*.heic  binary
+
+# Fusion 360 files
+*.f3d   binary
+*.f3z   binary
+*.3mf   binary
+*.step  binary
+*.stp   binary
+*.iges  binary
+*.igs   binary
+
+# Lock large files to prevent accidental merges
+*.mp4   lock
+*.mov   lock
+*.avi   lock
+*.mkv   lock
+*.flv   lock
+*.wmv   lock
+*.webm  lock
+*.m4v   lock
+*.jpg   lock
+*.jpeg  lock
+*.png   lock
+*.gif   lock
+*.bmp   lock
+*.tiff  lock
+*.tif   lock
+*.svg   lock
+*.webp  lock
+*.heic  lock
+*.f3d   lock
+*.f3z   lock
+*.3mf   lock
+*.step  lock
+*.stp   lock
+*.iges  lock
+*.igs   lock
+

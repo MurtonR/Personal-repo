@@ -1,0 +1,17 @@
+Linear voltage regulator: 
+
+-Converts higher input voltage to a specific output voltage.
+
+-Wired to Ground, Input power and Output power to be used.
+
+-May need a resistor 
+
+Pros:
+
+-Allows a stable and almost noise-less constant voltage
+
+-Can be adjustable
+
+Cons:
+
+-Less efficient and release a relatively large amount of heat

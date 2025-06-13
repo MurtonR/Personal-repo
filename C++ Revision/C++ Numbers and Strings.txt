@@ -1,5 +1,0 @@
-C++ uses the + operator for both addition and concatenation.
-
-Numbers are added. Strings are concatenated.
-
-Cannot add a number to a string, this will result in an error

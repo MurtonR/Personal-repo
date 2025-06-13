@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Webpage title</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>The troubling case of rising obesity in the UK and how exercise and ethnicity could effect this rise nationwide.</title>
+  </head>
+  <body>
+       
+        <h1>The troubling case of rising obesity in the UK and how exercise and ethnicity could effect this rise nationwide. </h1>
+        <hr class="underline">
+        <h2 id="A1"><u>Abstract</u></h2>
+        <p> In this paper the links between Obesity, Exercise and Ethnicity are analysed to determine if there are any significant links between them. Using datasets made available by the UK government this paper analysed the % Obesity and % Exercise across the population of the UK by ethnicity, this paper found no link between % Obesity and % Exercise but did find data that could suggest a link between Ethnicity and the values of both.</p>
+        <hr class="underline">
+        <h2 id="A2"><u>Introduction</u></h2>
+        <p>Obesity is a condition classified by the World Health Organisation (WHO) as “abnormal or excessive fat accumulation that may impair health” [1]. Obesity is quantified as having a Body Mass Index (BMI) of greater than either 25, 30 or 40, to be medically considered overweight, obese, or severely obese respectively in the UK. According to the NHS 1 in 4 adults are obese, and 1 in 5 children aged 10 to 11 have obesity [2]. In this report I will review data from the UK Government in order to determine if the “Obesity Epidemic” [3] is affecting the UK and if a decrease in exercise across the UK relates to an increase in obesity, the datasets used in this data visualisation are under the Open Government License[3], and are from official UK government sources.</p>
+        <p>This literature review will determine how exercise affects obesity and the factors that cause it such as stress, I will then determine possible reasons for these changes to form a hypothesis from the findings. The stakeholder for this academic report will be the NHS and in general the UK government itself. The data visualisation will then be used to determine if there has been a rise of obesity in adults in the UK and if it is correlated with a change in the amount the UK exercises as well as if certain ethnicities are affected less or more.</p>
+        <hr class="underline">
+        <h2 id="A3"><u>Literature</u></h2>
+        <p>Adipose tissue or fatty tissue is a connective tissue mainly made of fat cells called adipocytes[4], [5].  Having too much adipose tissue can lead to many serious side effects such as High blood pressure and cholesterol, type 2 diabetes or Venous Thrombo-embolism[6]. In one study all SR/MA’s reported that exercise lead to significant weight loss compared to the control group that did not exercise at all, this weight loss was seen regardless of the type of exercise done[7]. The same study noted that three SR/MA’s reported significant loss of visceral adipose tissue independent of what type of exercise occurred.</p>
+        <p>Exercise has been shown to reduce anxiety, depression and other stress-related mental health issues significantly with it often being used as a part of a bigger therapeutic process [8], [9]. Exercise reduces the stress of day-to-day life by preventing serious mental health issues from occurring and increasing personal confidence [10].</p>
+        <p>A study that focused on the interviewing men and women from Germany found that there were 5 global themes that can lead to weight stigma-induced self-exclusion from sport and PA settings[11].  A longitudinal panel study of 5480 men and women under 50 found that there was less reports of weight discrimination in participants who exercised more than those who exercised less [12], specifically figure 1 is a bar chart that shows the lower the level of exercise the higher percentage of that group who reported weight discrimination. This stigma may lead to overweight individuals exercising less as well as suffering from significantly more stress due to this stigma[13], resulting in a causal loop between increasing weight and decreasing amount of exercise. Weight discrimination has been shown to increase cortisol reactivity [14], cortisol is a hormone that is released in response to stress and could be linked to increased stress-eating and weight gain[15].</p>
+        <p>An article published 24th 2021 did a meta-analysis of 54 studies found that the relationship between stress and overall food consumption was small in magnitude[16], however it also found “a significant, negative association was found between stress and healthy food consumption”, [17], [18]. Simply this means that when stress increases healthy food consumption decreases, this is not implying causation but just a correlation between the two. </p>
+        <p>The null hypothesis is that there is a negative correlation between % Obesity and % Exercise and that this correlation is different between ethnicities, this is due to an increase in adipose tissue and an increase of stress, both of which can lead to an increase in unhealthy eating and weight gain. The alternate hypothesis is that there is either no correlation between the variables or there they are directly proportional to one another.</p>
+        
+        <hr class="underline">
+        <h2 id="A4"><u>Methods</u></h2>
+        <p>In this report there are two datasets from the UK government website, the first is comprised of the percentage of people who exercise in the UK by ethnicity, this data is based on people self-reporting and as such could be unreliable.[18], the second is made of the percentage of people who are overweight in the UK by ethnicity[19]. In both datasets the overall change has been calculated for both % Obesity and % Exercise for all ethnicities and added to the dataset.</p>
+        <center><img src="assets/CodeSnippet1.png" alt="CodeSnippet1" style = text-align:center></center>
+        <p>Figure 1</p>
+        <p>The year of 2015 is ignored from the obesity dataset while 2021 and 2022 have been ignored from the exercise dataset, this has been done to ensure the comparisons are honest and compare the same span of time for both. In the code used for graphs where a comparison was made between the two databases across time the values for “Overall Change 2016-2020” to provide a clear comparison as the values for Overall Change are significantly smaller and would make identifying a trend over time more difficult. </p>
+        <center><img src="assets/CodeSnippetLinePlot.png" alt="LinePlotCodeSnippet"style = text-align:center> </center>
+        <p>Figure 2</p>
+        <p>For the first matplotlib and Pandas have been used to plot a line graph [21] for the average % obesity and % exercise for the UK independent of ethnicity over time, pd.concat was used to add the datasets to each other. Next the data values used were simplified to be the % Obesity and % Exercise for only the “All” row, this was done so the overall trends could be observed. Next the line graphs for both were plotted and the labelling for the graph coded. </p>
+        <center><img src="assets/CodeSnippetObesityCatPlot.png" alt="ObesityCatPlot" style = text-align:center><img src="assets/CodeSnippetExerciseCatPlot.png" alt="ExerciseCatPlot" style = text-align:center> </center>
+        <p>Figure 3</p>
+        <p>The next two are graphs that show the changes over time for each ethnicity, these are formatted as grouped bar plots to clearly show the distinction between each ethnicity and to allow the identification of trends to be more easily done. Grouped bars and seaborn were used to make the changes across time more evident for each ethnicity and so the palette could be changed to make the graph cleaner. Additionally, both have the values for overall change plotted to allow comparison across the ethnicities.</p>
+        <hr class="underline">
+        <h2 id="A5"><u>Results</u></h2>
+        <center><img src="assets/Figure_1.png" alt="ExerciseCatPot" width = "870" height = "530"  style = text-align:center></center>
+        <p>Figure 4</p>
+        <p>Figure 4 shows a bar chart of % Exercise against Ethnicity grouped by Time:</p>
+        <p>In figure 4 the mixed ethnicity has the highest % Exercise [Figure 8] than any other group for every year, while the Asian and Black ethnicities had the lowest mean % Exercise [Figure 8].  The Asian group also had the largest decrease in % Exercise than any other group. This supports the hypothesis that different Ethnic groups have unseen factors that affect the % Exercise in their respective groups.</p>
+        <center><img src="assets/Figure_2.png" alt="ObesityCatPlot"  width = "870" height = "530"  style = text-align:center></center>
+        <p>Figure 5 shows a bar chart of % Obesity against Ethnicity grouped by Time:</p>
+        <p>In figure 5 almost every Ethnicity had an overall increase in % Obesity, with Chinese and Other having the most significant increase whereas Mixed had no change. Chinese had a significantly lower mean [Figure 7] % Obesity while also having the second highest overall increase. Black had the highest average % Obesity [Figure 7] of any group. As Obesity can be linked to genetics it is possible that specific ethnic groups are pre-disposed to increased weight gain and as such increased risk of obesity. Additionally, it could be due to the social and cultural norms of certain ethnicities, with some peer pressuring members to maintain a low body weight and as such will have a reduced level of obesity. Both the Chinese and Black groups show that ethnicity is a factor that affects Obesity and amount of exercise. Overall, there was an increase in obesity and a decrease in the amount of people exercising.</p>
+        <center><img src="assets/Figure_3.png" alt="inePlot" style = text-align:center></center>
+        <p>Figure 6 shows a line graph of % Obesity and % Exercise against Ethnicity:</p>
+        <p>From 2016 to 2017 in figure 6 there Is a negative correlation between % Obesity and % Exercise, however from 2017 to 2019 both variables increase. In 2020 there was a significant drop in % Exercise while % Obesity continued increasing at nearly the same rate, this could be due to the Covid Pandemic that occurred during this year, and as such a lower percentage of people were exercising due to restrictions on going to gyms and exercising outside. Overall, there was no observable correlation between % Exercise and % Obesity, this is most likely due to external factors such as diet or genetics playing a much bigger role than exercise.</p>
+
+
+        <hr class="underline">
+        <h2 id="A6"><u>Conclusions</u></h2>
+        <P>This study found no conclusive evidence to prove a causal correlation between % Obesity and % Exercise, however there is evidence to suggest that both % Obesity and % Exercise are affected by Ethnicity and that this has a significant effect on the values of both as seen in the Black and Chinese ethnic groups. </P>
+        <p>This paper recommends that further studies should be done on the links between % Obesity, % Exercise and Ethnicity, with these studies sampling more frequently to obtain a reliable and accurate dataset, that can be used to compare trends across a much larger sample size than the datasets used in this paper.</p>
+        <P>For my stakeholder I would recommend campaigns to promote healthy eating and dieting, while exercise is the first step on the path to freedom from obesity, it’s not going to solve anything by itself, and as such attempting to tackle factors that have a more significant impact on Obesity would be far more useful and cost-effective.</P>
+        <hr class="underline">
+        <h2 id="A8"><u>References</u></h2>
+        <p>[1]	‘Obesity and overweight’. Accessed: Feb. 16, 2024. [Online]. Available:<a href=" https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight">Click Here To View</a></p>
+        <p>[2]	‘Obesity’, nhs.uk. Accessed: Feb. 16, 2024. [Online]. Available:<a href="https://www.nhs.uk/conditions/obesity/">Click Here To View</a></p> 
+        <p>[3]	‘Open Government Licence’. Accessed: Feb. 16, 2024. [Online]. Available:<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Click Here To View</a> </p>
+        <p>[4]	‘Adipose Tissue: What Is It, Location, Function, and More | Osmosis’. Accessed: Feb. 26, 2024. [Online]. Available:<a href="https://www.osmosis.org/answers/adipose-tissue">Click Here To View</a> </p>
+        <p>[5]	A. J. Richard, U. White, C. M. Elks, and J. M. Stephens, ‘Adipose Tissue: Physiology to Metabolic Dysfunction’, in Endotext, K. R. Feingold, B. Anawalt, M. R. Blackman, A. Boyce, G. Chrousos, E. Corpas, W. W. de Herder, K. Dhatariya, K. Dungan, J. Hofland, S. Kalra, G. Kaltsas, N. Kapoor, C. Koch, P. Kopp, M. Korbonits, C. S. Kovacs, W. Kuohung, B. Laferrère, M. Levy, E. A. McGee, R. McLachlan, M. New, J. Purnell, R. Sahay, A. S. Shah, F. Singer, M. A. Sperling, C. A. Stratakis, D. L. Trence, and D. P. Wilson, Eds., South Dartmouth (MA): MDText.com, Inc., 2000. Accessed: Feb. 26, 2024. [Online]. Available:<a href="http://www.ncbi.nlm.nih.gov/books/NBK555602/">Click Here To View</a> </p>
+        <P>[6]	‘Adipose Tissue (Body Fat): Anatomy & Function’, Cleveland Clinic. Accessed: Feb. 28, 2024. [Online]. Available:<a href="https://my.clevelandclinic.org/health/body/24052-adipose-tissue-body-fat">Click Here To View</a> </P>
+        <p>[7]	A. Bellicha et al., ‘Effect of exercise training on weight loss, body composition changes, and weight maintenance in adults with overweight or obesity: An overview of 12 systematic reviews and 149 studies’, Obes. Rev., vol. 22, no. Suppl 4, p. e13256, Jul. 2021, doi: 10.1111/obr.13256.</p>
+        <P>[8]	A. Mahindru, P. Patil, and V. Agrawal, ‘Role of Physical Activity on Mental Health and Well-Being: A Review’, Cureus, vol. 15, no. 1, p. e33475, doi: 10.7759/cureus.33475.</P>
+        <p>[9]	‘Using Exercise in Mental Health Treatment | Article’, Therapist Aid. Accessed: Mar. 05, 2024. [Online]. Available:<a href="https://www.therapistaid.com/therapy-guide/exercise-and-mental-health-treatments">Click Here To View</a> </p>
+        <P>[10]	‘Benefits of exercise’, nhs.uk. Accessed: Mar. 05, 2024. [Online]. Available:<a href="https://www.nhs.uk/live-well/exercise/exercise-health-benefits/">Click Here To View</a>  </P>
+        <p>[11]	H. K. Thedinga, R. Zehl, and A. Thiel, ‘Weight stigma experiences and self-exclusion from sport and exercise settings among people with obesity’, BMC Public Health, vol. 21, no. 1, p. 565, Mar. 2021, doi: 10.1186/s12889-021-10565-7.</p>
+        <P>[12]	C. Beynon, ‘Association between children living with obesity and Mental Health problems: a data analysis of the Welsh Health Survey, UK’, BMC Public Health, vol. 23, no. 1, p. 383, Feb. 2023, doi: 10.1186/s12889-023-15293-8.</P>
+        <p>[13]	Y.-K. Wu and D. C. Berry, ‘Impact of weight stigma on physiological and psychological health outcomes for overweight and obese adults: A systematic review’, J. Adv. Nurs., vol. 74, no. 5, pp. 1030–1042, 2018, doi: 10.1111/jan.13511.</p>
+        <P>[14]	M. S. Himmelstein, A. C. Incollingo Belsky, and A. J. Tomiyama, ‘The weight of stigma: Cortisol reactivity to manipulated weight stigma’, Obesity, vol. 23, no. 2, pp. 368–374, 2015, doi: 10.1002/oby.20959.</P>
+        <p>[15]	E. Epel, R. Lapidus, B. McEwen, and K. Brownell, ‘Stress may add bite to appetite in women: a laboratory study of stress-induced cortisol and eating behavior’, Psychoneuroendocrinology, vol. 26, no. 1, pp. 37–49, Jan. 2001, doi: 10.1016/S0306-4530(00)00035-4.</p>
+        <P>[16]	D. Hill et al., ‘Stress and eating behaviours in healthy adults: a systematic review and meta-analysis’, Health Psychol. Rev., vol. 16, no. 2, pp. 280–304, Apr. 2022, doi: 10.1080/17437199.2021.1923406.</P>
+        <p>[17]	‘Why stress causes people to overeat’, Harvard Health. Accessed: Mar. 05, 2024. [Online]. Available:<a href="https://www.health.harvard.edu/staying-healthy/why-stress-causes-people-to-overeat/">Click Here To View</a> </p>
+        <P>[18]	‘Why You Stress Eat and How To Stop’, Cleveland Clinic. Accessed: Mar. 05, 2024. [Online]. Available:<a href="https://health.clevelandclinic.org/how-to-stop-stress-eating">Click Here To View</a> </P>
+        <p>[19]	‘Physical activity’. Accessed: Feb. 29, 2024. [Online]. Available:<a href="https://www.ethnicity-facts-figures.service.gov.uk/health/diet-and-exercise/physical-activity/latest/">Click Here To View</a> </p>
+        <P>[20]	‘Overweight adults’. Accessed: Feb. 29, 2024. [Online]. Available:<a href="https://www.ethnicity-facts-figures.service.gov.uk/health/diet-and-exercise/overweight-adults/latest/">Click Here To View</a> </P>
+        <p>[21]	‘- VleReader’. Accessed: Mar. 05, 2024. [Online]. Available:<a href=" https://r2.vlereader.com/Reader?ean=9781098104009">Click Here To View</a></p>
+        <hr class="underline">
+        <h2 id="A9"><u>Appendix</u></h2>
+        <center><img src="assets/Figure_5.png" alt="BoxWhiskerLinePlot" width = "850" height = "520" style = text-align:center></center> 
+        <p>Figure 7</p>
+        <center><img src="assets/Figure_6.png" alt="BoxWhiskerLinePlot" style = text-align:center></center> 
+        <p>Figure 8</p>
+
+   
+      <h3 style = "font-size: 20px; line-height: 30px;text-align: left;border: 3px;border-color: black;border-style: solid; position: fixed; top: 43px; left: 0; width: 12%; font-family: fangsong;">>
+         <u>Table of Contents</u><br>
+         <a href="#A1" >Abstract</a><br>
+         <a href="#A2">Introduction</a><br>
+         <a href="#A3">Literature</a><br>
+         <a href="#A4">Methods</a><br>
+         <a href="#A5">Results</a><br>
+         <a href="#A6">Conclusions</a><br>
+         <a href="#A8">References</a><br>
+         <a href="#A9">Appendix</a><br>
+          </h3>
+      
+
+  </body>
+  <html>

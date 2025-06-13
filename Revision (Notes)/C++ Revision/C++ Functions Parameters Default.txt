@@ -1,0 +1,20 @@
+You can also use a default parameter value, by using the equals sign (=).
+
+If we call the function without an argument, it uses the default value ("Norway"):
+
+void myFunction(string country = "Norway"){
+ cout << country << "\n";
+ }
+
+
+int main() {
+myFunction("Japan");
+myFunction();
+myFunction("Israel");
+myFunction("United Kingdom");
+ 
+return 0;
+}
+
+  
+A parameter with a default value is also called an optional parameter, in this case the optimal parameter is country and the default value is "Norway"

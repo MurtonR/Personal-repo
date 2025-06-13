@@ -1,0 +1,35 @@
+You can change a value of a specific item by referring to it's key name. 
+
+Example:
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+}
+
+myDict["Colour"] = "Blue"
+
+print(myDict) #Prints, {'Brand': 'Renault', 'Model': 'Reliable', 'Colour': 'Blue'}
+
+
+
+
+
+The update() method can be used to change the values of specific items in a dictionary, as long as the object is either a dictionary or another iterable object which has key:value pairs ( [Joe = "Biden", Car = "King"] )
+
+Example:
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+}
+
+myDict.update({"Colour": "Green"})
+
+print(myDict) #Prints, {'Brand': 'Renault', 'Model': 'Reliable', 'Colour': 'Green'}
+
+
+

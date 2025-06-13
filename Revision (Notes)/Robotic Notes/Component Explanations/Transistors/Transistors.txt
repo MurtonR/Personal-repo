@@ -1,0 +1,35 @@
+Transistors
+
+-Also only a minimal amount of energy is lost as heat.
+-Only adjusts current flow not voltage specifically.
+
+
+NPN Transistor:
+
+-Wired Base to Positive voltage (digital pin).
+-Collector connects to Motor (load).
+-Emitter connects to ground.
+
+Used in digital circuits and high-speed switching
+
+
+PNP Transistor:
+
+-Wired Base to Lower voltage (digital pin).
+-Emitter connects to power source.
+-Collector connects to Motor (load).
+
+Used in low-power applications and analog circuits
+
+
+Applications:
+
+-Can be used as a switch by setting the digital pin (HIGH, LOW).
+
+-Can be used to power LED's or relays as the transistor amplifies current.
+
+-A small current at the base controls the larger current between the collector and emitter.
+
+-Can be used to amplify voltage.
+
+-Can be used to shift voltage levels, for example one direction 3V controls 5V or the other way around.

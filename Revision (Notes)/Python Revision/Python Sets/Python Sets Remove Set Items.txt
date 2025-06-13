@@ -1,0 +1,86 @@
+In order to remove items in a set use either the remove() or discard() methods, however when using the remove() method if the item to be removed does not exist it will result in an error, this does not happen with the discard() method.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.remove("apple")
+
+print(mySet) #Prints, {'cherry', 'banana'}
+
+
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.remove("mango")
+
+print(mySet) #Prints, KeyError: 'mango'
+
+
+
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.discard("apple")
+
+print(mySet) #Prints, {'cherry', 'banana'}
+
+
+
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.discard("mango")
+
+print(mySet) #Prints, {'cherry', 'banana', 'apple'}
+
+
+
+
+
+
+Using the pop() method it is possible to remove a random item, if you print the pop() method then it will print what item will we removed.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+x = mySet.pop()
+
+print(x) #Prints, cherry
+
+print(mySet) #Prints {'banana', 'apple'}
+
+
+
+
+Using the clear() method will remove all the contents of a set.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+mySet.clear()
+
+print(mySet) #Prints, set()
+
+
+
+
+
+Using the del keyword will delete a set completely.
+
+Example:
+
+mySet = {"apple", "banana", "cherry"}
+
+del mySet
+
+print(mySet) #Prints an error as the set mySet no longer exists
+
+
+
+
+
+
+

@@ -1,7 +1,0 @@
-// This is a comment    -Any Characters after "//" are not read, this is called a comment, and can be used to explain code
-cout << "Hello World!"; -A Comment must begin with "//" and all code is ignored until the end of that line
-                        -And can be used at any point in a script
-
-/* The code below will print the words Hello World! -Comments can be multi line but must begin with /* and end with */
-to the screen, and it is amazing */                 -This allows longer comments
-cout << "Hello World!";

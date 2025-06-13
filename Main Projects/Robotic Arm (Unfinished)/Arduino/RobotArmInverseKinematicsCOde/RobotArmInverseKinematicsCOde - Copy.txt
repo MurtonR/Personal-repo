@@ -1,0 +1,61 @@
+# include <math.h>
+#include <Servo.h>
+#include <string.h>
+
+
+int y ; //y-coordinate of desired direction
+int x ; //x-coordinate of desired direction
+float a =800; //length of first arm
+float b = 800; //length of second arm
+float r; //length of final side of the triangle
+double One;
+double Two; //Final position of the second servo
+double Three;
+double OneMain; //Final position of first servo
+double Conversion = 180 / M_PI;
+Servo firstJoint; //Servo for the first joinr
+Servo secondJoint; //Servo for the second joint
+int firstPos = 0; //position of the first servo
+int secondPos = 0; //position of the second servo 
+bool coordinateComplete = false;
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+firstJoint.attach(9); //Setup the servos and which pins they will be attached to.
+secondJoint.attach(10);
+//firstJoint.write(firstPos);
+//secondJoint.write(secondPos);
+}
+
+void loop() {
+if (Serial.available() > 0) {
+  char Coord = Serial.read();
+  char token = strtok(Coord, ",");
+   x = atoi(token);
+  token = strtok(NULL,",");
+   y = atoi(token);
+   coordinateComplete = true;
+   delay(1000);
+}
+
+
+if (coordinateComplete = true){
+r = sqrt(sq(x) + sq(y)); //Pythagoras thereom for r
+ Three = atan(y/x); //
+ double BottomFirst = (2 * r * a); //Denominator of Cosine rule
+ double TopFirst = (sq(r) + sq(a) - sq(b));  //Numerator of the Cosine rule
+ One = acos(TopFirst / BottomFirst);
+ OneMain = Three - One;
+ OneMain = OneMain * Conversion; //Conversion from radians to degrees 
+ 
+double BottomSecond = (2 * a * b); //Denominator of Cosine rule
+double TopSecond = (sq(a) + sq(b) - sq(r)); //Numeratir of the Cosine rule
+Two = (TopSecond/ BottomSecond);
+Two = Two * Conversion; //Conversion from radians to degrees
+firstJoint.write(OneMain); //rotates the servo for the first joint 
+secondJoint.write(Two); //rotates the servo for the second joint 
+}
+}
+
+
+

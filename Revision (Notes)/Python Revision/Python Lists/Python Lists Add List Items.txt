@@ -1,0 +1,37 @@
+To add an item to the end of a list use the append() method.
+
+Example:
+
+myList = ["Joe!", "Biden", "Nice!"]
+myList.append("Winner!")
+print(myList)
+
+
+To append elements from another list use the extend() method, this can be used to append a single item, a range or an entire list to another.
+Example:
+
+myList = ["Joe!"]
+notMyList = ["Is", "Pretty", "Weird"]
+myList.extend(notMyList)
+print(myList)
+
+myList = ["Joe!"]
+notMyList = ["Is", "Pretty", "Weird"]
+myList.extend(notMyList[0:2])
+print(myList)
+
+
+
+
+The extend() method can be used to add any two arrays (iterable object) together.
+
+Example:
+
+myList = ["Joe!"]
+notMyTuple = ("Biden", "Nice!")
+myList.extend(notMyTuple)
+print(myList) #Prints, ['Joe!', 'Biden', 'Nice!']
+
+
+
+

@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World! \n";    -"\n" can be used to insert a new line shifting the next output down one
+  cout << "I am learning C++";
+  return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World! \n\n";   -"\n\n" can be used to print a blank line between the first and second output
+  cout << "I am learning C++";   -For each "\n" it shifts down so longer gaps can also be printed
+  return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World!" << endl; -"endl" can be used instead of "\n" , it can also be stacked by repeating "<< endl"
+  cout << "I am learning C++";    -"endl" should be used on unstable systems as it flushes 
+  return 0;
+}
+
+The newline character (\n) is called an escape sequence, and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.
+
+Three more examples are:
+-"\t" (to create a horizontal tab)
+-"\\" (to add a backslash character)
+-"\"" (To add a double quote character)
+
+All of which can be repeated like "\n"

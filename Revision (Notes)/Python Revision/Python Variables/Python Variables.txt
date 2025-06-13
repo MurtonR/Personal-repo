@@ -1,0 +1,59 @@
+There is no need to declare a variable in python, they are simply created when you assign a value to them.
+
+Example:
+
+x = 5
+y = "Hello, World!"
+
+
+The variable type can be changed at any time, even after it has a value assigned to it.
+
+Example:
+
+x = 5
+x = "Hello, World!"
+print(x)
+
+
+The type of a variable can be manually set, this is called casting, however the values assigned must be valid.
+
+Example:
+
+x = str(5)
+y = int(5)
+z = float(5.10)
+
+print(x)
+print(y)
+print(z)
+
+
+The type of a variable can be printed by using the type() function
+
+Example:
+
+x = str(5)
+y = int(5)
+
+print(type(x))
+print(type(y))
+
+
+String variables can be declared using either double or single quotes
+
+x = "Joe"
+y = 'Joe'
+
+print(x)
+print(y)
+
+
+Variables are also case-sensitive
+
+Example:
+
+a = "Joe"
+A = 'Joe'
+
+print(a)
+print(A)

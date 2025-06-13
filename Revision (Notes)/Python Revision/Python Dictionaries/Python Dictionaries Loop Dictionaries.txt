@@ -1,0 +1,68 @@
+You can loop through a dictionary by using the for keyword, this returns the keys however there are methods to return the values as well.
+
+Example:
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+for x in myDict:
+    print(x) #Prints, Brand, Model, Colour
+
+
+
+
+
+In order to print the values either use the value() method or refer to the dictionary when using the print() function.
+
+Example:
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+for x in myDict:
+    print(myDict[x]) #Prints, Renault, Reliable, Red
+
+
+
+
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+
+} 
+
+for x in myDict.values():
+    print(x)  #Prints, Renault, Reliable, Red
+
+
+
+
+
+
+
+You can use the keys() method in order to only print the keys and then the items() method will print both the keys and values.
+
+Example:
+
+myDict = {
+    "Brand": "Renault",
+    "Model": "Reliable",
+    "Colour": "Red"
+}
+
+for x in myDict.keys():
+    print(x) #Prints, Brand, Model, Colour
+
+for x in myDict.items():
+    print(x) #('Brand', 'Renault') ('Model', 'Reliable') ('Colour', 'Red')
