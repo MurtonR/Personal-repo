@@ -1,0 +1,18 @@
+To check is an character is present in a string you can use std::set<std::string> ____  and then .count()
+This returns 1 if the character is present and 1 if not
+
+std::set<std::string> checking {"a","b","b","c"};
+
+if(checking.count("b")){
+   return 1;
+}
+else{
+   return 0;
+}
+
+
+If you use multiset it will return the number of times that element appears instead
+
+std::multiset<std::string> checking {"a","b","b","c"};
+
+return checking.count("b");

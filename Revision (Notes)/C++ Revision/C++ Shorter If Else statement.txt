@@ -1,0 +1,7 @@
+return value ? "Yes" : "No";
+
+This is how to do a quick if else statement.
+
+If value == 1 or "True" then return "Yes"
+
+If value == 0 or "False" then return "No"

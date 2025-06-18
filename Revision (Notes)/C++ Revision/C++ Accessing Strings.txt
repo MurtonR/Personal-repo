@@ -39,3 +39,16 @@ int main() {
 }
 
 
+You can access the first and last elements of a string by using the .front() and .back() functions
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string myString = "Hello";
+  cout << myString.front();   -returns "H"
+  return 0;
+}
+
+

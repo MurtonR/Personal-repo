@@ -1,0 +1,7 @@
+#include <string>
+
+std::string number_to_string(int num) {
+    return std::to_string(num);
+}
+
+The function "std::to_string()" converts an integer to a std::string
