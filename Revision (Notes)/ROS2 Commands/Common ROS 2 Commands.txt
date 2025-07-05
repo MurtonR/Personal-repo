@@ -1,0 +1,91 @@
+Common ROS 2 Commands:
+
+Navigation:
+
+cd C:\pixi_ws    -To move to correct directory
+
+Checks:
+
+set | findstr -i ROS   -Prints the environment variables and can be used to check version of both ROS and python, along with what version is installed.
+
+Misc:
+
+call C:\pixi_ws\ros2-windows\local_setup.bat     -Source setup files.
+
+
+set ROS_DOMAIN_ID=<your_domain_id>      -Choose a domain id between 0 -101 has to do with the ports, will go in detail later for notes.
+
+
+set ROS_DOMAIN_ID=4                     =Example of correct code.
+
+Turtlesim:
+
+Setup:
+
+ros2 pkg executables turtlesim   -Prints list of executables if turtlesim is installed correctly.
+
+ros2 run turtlesim turtlesim_node
+
+
+
+
+New desktop version:
+
+pixi init pixi-ros2 -c https://prefix.dev/conda-forge -c "https://prefix.dev/robostack-humble"      
+cd pixi-ros2  
+ 
+
+pixi run rviz2   -runs rviz2
+
+
+pixi run ros2 run turtlesim turtlesim_node    -run turtlesim
+
+
+pixi shell
+ros2 run turtlesim turtlesim_node     
+
+- this runs it in a shell instead, this ensures the correct dependencies are running, and all commands will work as the environment is fully source, will avoid any conflicts if multiple versions of ros is installed
+
+
+pixi run ros2 pkg create --build-type ament_python --destination-directory src --node-name my_node my_package  
+
+-Custom python node
+
+
+pixi task add (task name)  "command to run"
+pixi task remove (task name)
+pixi run (task name)
+
+-Allows much quicker running of complex commands, remove brackets
+
+
+pixi run ros2 pkg create --build-type ament_python --destination-directory src --node-name my_node my_package 
+
+-Creates a node using "ament_python" in the destination "src" with the node name "my_name" and a package called "my_package"
+
+-A node is a piece of software within a robotics system
+
+-A node publishes data and other nodes subscribe, this ensures a one way form of communication that allows the "movement" node for example to understand which direction to turn from the "sensor" node.
+
+pixi add colcon-common-extensions "setuptools<=58.2.0"
+
+-Dependency that simplifies the build processes (running the full project)
+
+pixi add ros-humble-ament-cmake-auto compilers pkg-config cmake ninja
+
+-Dependency to add C++ Nodes to Ros2
+
+
+
+pixi run ros2 pkg create --build-type ament_cmake --destination-directory src --node-name my_cpp_node my_cpp_package
+
+-Creates a C++ node called "my_code_node" and with a package (code) called "my_cpp_package"
+
+
+# Passing arguments to the build command to build with Ninja, add them to the manifest if you want to default to ninja.
+pixi run build --cmake-args -G Ninja
+pixi run ros2 run my_cpp_package my_cpp_node
+
+
+
+

@@ -1,0 +1,3 @@
+Ros2 Setup:
+
+pixi init pixi-ros2 -c https://prefix.dev/conda-forge -c "https://prefix.dev/robostack-humble"      

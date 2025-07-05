@@ -1,0 +1,13 @@
+Ros2 Dependencies:
+
+
+Dependency that simplifies the build processes (running the full project):
+
+-pixi add colcon-common-extensions "setuptools<=58.2.0"
+
+
+
+
+Dependency to add C++ Nodes to Ros2:
+
+-pixi add ros-humble-ament-cmake-auto compilers pkg-config cmake ninja

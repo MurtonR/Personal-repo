@@ -1,0 +1,21 @@
+Ros2 Nodes:
+
+Creating a python node:
+
+-pixi run ros2 pkg create --build-type ament_python --destination-directory src --node-name my_node my_package 
+
+
+Here is what each section means and why it is present, this is common between most node setups:
+
+-Creates a node using "ament_python" in the destination "src" with the node name "my_name" and a package called "my_package"
+
+-A node is a piece of software within a robotics system
+
+-A node publishes data and other nodes subscribe, this ensures a one way form of communication that allows the "movement" node for example to understand which direction to turn from the "sensor" node.
+
+
+
+Dependency to add C++ Nodes to Ros2 that use CMake:
+
+-pixi add ros-humble-ament-cmake-auto compilers pkg-config cmake ninja
+

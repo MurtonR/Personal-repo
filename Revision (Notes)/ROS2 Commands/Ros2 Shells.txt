@@ -1,0 +1,5 @@
+Ros2 Shells:
+
+this runs it in a shell instead, this ensures the correct dependencies are running, and all commands will work as the environment is fully source, will avoid any conflicts if multiple versions of ros is installed:
+
+-pixi shell
