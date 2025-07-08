@@ -1,0 +1,5 @@
+Ros2 Common Features:
+
+"-t" at the end of a command will give the type:
+
+-pixi run ros2 topic list -t          This will give a list of the topics with the type of each along with it

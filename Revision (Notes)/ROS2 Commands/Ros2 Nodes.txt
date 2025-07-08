@@ -19,3 +19,14 @@ Dependency to add C++ Nodes to Ros2 that use CMake:
 
 -pixi add ros-humble-ament-cmake-auto compilers pkg-config cmake ninja
 
+
+Creates a C++ node called "my_code_node" and with a package (code) called "my_cpp_package":
+
+-pixi run ros2 pkg create --build-type ament_cmake --destination-directory src --node-name my_cpp_node my_cpp_package
+
+
+
+"ros2 run" launches an executable:
+
+-ros2 run <package_name> <executable_name>
+-ros2 run turtlesim turtlesim_node

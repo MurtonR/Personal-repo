@@ -1,0 +1,9 @@
+Ros2 Topics:
+
+You can access a list of topics like nodes, services and actions:
+
+-pixi run ros2 topic list 
+
+If you use -t you can get the type of message sent:
+
+-pixi run ros2 topic list -t
