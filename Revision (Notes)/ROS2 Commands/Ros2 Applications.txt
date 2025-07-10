@@ -9,4 +9,3 @@ runs rviz2:
 run turtlesim:
 
 -pixi run ros2 run turtlesim turtlesim_node    
-

@@ -7,3 +7,36 @@ You can access a list of topics like nodes, services and actions:
 If you use -t you can get the type of message sent:
 
 -pixi run ros2 topic list -t
+
+
+If you want to see the data being sent to a topic use:
+
+-ros2 topic echo <topic_name>
+
+
+If you want to publish a piece of data only once use "--once":
+
+-ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 2.0}}"
+
+
+
+If you have an echo attached or multiple of the same subscriptions you will need to use "-w 2" which waits for two matching subscriptions:
+
+-ros2 topic pub --once -w 2 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0}, angular: {z: 2.0}}"
+
+
+You can see the rate (hz) at which data is sent using:
+
+-ros2 topic hz <topic_name>
+
+
+
+You can see the bandwith of a topic using:
+
+-ros2 topic bw <topic_name>
+
+
+You can find a list of every topic of a certain type using:
+
+-ros2 topic find <msg_type>
+-ros2 topic find geometry_msgs/msg/Twist

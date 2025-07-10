@@ -1,0 +1,5 @@
+Ros2 rqt;
+
+-rqt can be used to view the topics, actions, services in a node.
+
+-"rqt_graph" can be used to get a visualisation of connected parts, (publishing and subscribing).

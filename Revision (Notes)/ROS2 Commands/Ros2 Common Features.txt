@@ -3,3 +3,13 @@ Ros2 Common Features:
 "-t" at the end of a command will give the type:
 
 -pixi run ros2 topic list -t          This will give a list of the topics with the type of each along with it
+
+
+You can get the expected structure of data sent to a topic using "interface <package_name/msg/message_name>":
+
+-ros2 interface show geometry_msgs/msg/Twist
+
+
+"--ros-args" specifies that the next line of code is directed towards ros itself and shouldn't be treated like a normal command line command:
+
+-ros2 run turtlesim turtlesim_node --ros-args --remap __node:= my_turtle

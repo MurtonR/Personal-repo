@@ -25,6 +25,10 @@ Creates a C++ node called "my_code_node" and with a package (code) called "my_cp
 -pixi run ros2 pkg create --build-type ament_cmake --destination-directory src --node-name my_cpp_node my_cpp_package
 
 
+To rename a node use "--remap" (a node cannot be renamed to ' ' or have an ' ' at the beginning of the name):
+
+-ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
+
 
 "ros2 run" launches an executable:
 
