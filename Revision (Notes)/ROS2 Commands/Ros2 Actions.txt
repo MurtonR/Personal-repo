@@ -1,0 +1,64 @@
+Ros2 Actions:
+
+Actions have three components goal, feedback and a result, actions are comprised of topics and services, their function is similar to services but actions can be cancelled, as they provide steady feedback unlike services.
+
+An "Action Client" node sends a goal to an "Action Server" node that acknowledges this and returns constant feedback and a result.
+
+If the "Action Client" cancels a goal then it is considered "cancelled" if the "Action Server" cancels a goal it is considered "Aborted".
+
+Because an action sends feedback it can be used for tasks where the "goal" might change, if a robot was navigating and constantly sending how close it was, you could activate another action when it is close.
+
+
+
+
+Much like the other commands (service, node, topic and param) you can usually use "list", "type", "info" and "interface show" to see the expected data format.
+
+
+To get a list of all actions within ROS use:
+
+-ros2 action list
+
+
+To get a list of all actions with the data type use:
+
+-ros2 action list -t
+
+
+To get the type of an action use:
+
+-ros2 action type <action_name>
+-ros2 action type /turtle1/rotate_absolute
+
+
+
+To get the info of an action use:
+
+-ros2 action info <action_name> 
+-ros2 action info /turtle1/rotate_absolute
+
+
+
+To get the expected format of a data type use:
+
+-ros2 interface show <data_type>
+-ros2 interface show turtlesim/action/RotateAbsolute
+
+
+To send a goal to an action use "send_goal":
+
+-ros2 action send_goal <action_name> <data_type> <values>
+-ros2 action send_goal /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 200}"
+
+
+To see the feedback being received by the client from the server use "--feedback":
+
+-ros2 action send_goal --feedback <action_name> <data_type> <values>
+-ros2 action send_goal --feedback /turtle1/rotate_absolute turtlesim/action/RotateAbsolute "{theta: 200}"
+
+
+
+
+
+
+
+

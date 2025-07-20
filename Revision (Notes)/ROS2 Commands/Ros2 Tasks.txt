@@ -3,10 +3,11 @@ Ros2 Tasks:
 
 Allows much quicker running of complex commands, remove brackets:
 
--pixi task add (task name)  "command to run"
+-pixi task add <task name>  "command to run"
 
--pixi task remove (task name)
+-pixi task remove <task name>
 
--pixi run (task name)
+-pixi run <task name>
 
+-pixi task list
 

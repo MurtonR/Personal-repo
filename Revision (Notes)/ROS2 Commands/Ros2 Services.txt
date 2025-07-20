@@ -1,0 +1,49 @@
+Ros2 Services:
+
+A service communicates info from node to node on a call and response basis, one call calls for the data, then the service requests the data from another node, before passing it on to the original caller.
+
+Similar to topics but the "subscriber" and "publisher" nodes are now called "sevice client" for the caller and "service server" for the responder. 
+
+
+You can get a list of all services using:
+
+-ros2 service list
+
+
+You can get the type that a service is by using:
+
+-ros2 service type <service_name>
+-ros2 service type /clear
+
+
+You can use '-t' to get the type of all services at the same time:
+
+-ros2 service list -t
+
+
+You can use 'info' in order to get the type and the number of both service client and servers 
+
+(this does not work in this version of ros2)
+
+-ros2 service info <service_name>
+
+
+You can use the 'find' command to get a list of all services with a certain type:
+
+-ros2 service find <service_type>
+-ros2 service find rcl_interfaces/srv/DescribeParameters
+
+
+You can use 'interface show' to get the expected data structure for a service:
+
+-ros2 interface show <service_type>
+-ros2 interface show turtlesim/srv/Kill
+
+
+You can use 'call' to call a service for a response from a node:
+
+-ros2 service call <service_name> <service_type> <message>
+-ros2 service call /spawn turtlesim/srv/Spawn "{x: 2.0, y: 2.0, theta: 20}"
+
+
+

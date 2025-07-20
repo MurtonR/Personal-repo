@@ -1,0 +1,37 @@
+Ros2 Parameters:
+
+Parameters are very similar to variables, storing data.
+
+
+You can use 'list' to get a list of parameters:
+
+-ros2 param list
+
+
+You can use 'get' to get the type and current value of a parameter:
+
+-ros2 param get <node_name> <parameter_name>
+-ros2 param get /teleop_turtle scale_linear
+
+
+You can use 'set' to change the value held by a parameter:
+
+-ros2 param set <node_name> <parameter_name> <value>
+-ros2 param set /turtlesim background
+
+
+You can get the type and value of every parameter of a node using 'dump':
+
+-ros2 param dump <node_name>
+-ros2 param dump /turtlesim
+
+
+You can save these changes into a .yaml file
+
+
+To get the changes to the parameters to stay next time you open this use 'load':
+
+-ros2 param load <node_name> <parameter_file>
+-ros2 param load /turtlesim turtlesim.yaml
+
+
