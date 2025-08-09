@@ -1,5 +1,15 @@
-Ros2 rqt;
+Ros2 rqt:
 
--rqt can be used to view the topics, actions, services in a node.
+To open rqt use:
 
--"rqt_graph" can be used to get a visualisation of connected parts, (publishing and subscribing).
+-rqt
+
+
+To open rqt graph use:
+
+-rqt_graph
+
+
+To open rqt console use:
+
+-ros2 run rqt_console
