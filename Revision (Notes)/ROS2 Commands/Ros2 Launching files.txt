@@ -1,0 +1,7 @@
+Ros2 Launching files:
+
+To launch a file in ros2 use "launch":
+
+-ros2 launch turtlesim <file_name>
+
+-ros2 launch turtlesim multisim.launch.py
